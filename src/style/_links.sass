@@ -1,0 +1,60 @@
+@use "colors"
+@use "fonts"
+
+.link,
+a
+    text-decoration: none
+#html-body
+    a
+        text-decoration: underline
+.link-underline
+    border-bottom: 1px solid colors.$light
+
+.link,
+.link-underline,
+a
+    transition: color 0.2s ease-in-out
+    color: inherit
+    cursor: pointer
+
+.btn
+    border: 0
+    background-color: colors.$accent
+    color: colors.$light
+    font-weight: 600
+    font-size: fonts.$font-base 
+    padding: 9px 25px
+    cursor: pointer
+    &:hover
+        background: colors.$accent-light-1
+.btn-outline
+    padding: 7px 22px
+    border: 3px solid colors.$light
+    background: transparent
+    color: colors.$light
+    transition: background 0.2s ease-in-out
+    &:hover
+        background: colors.$dark
+.btn-outline-black
+    padding: 7px 22px
+    border: 3px solid colors.$dark
+    background: transparent
+    color: colors.$dark
+    transition: background 0.2s ease-in-out
+    &:hover
+        background: colors.$light
+.btn-disabled
+    background: colors.$accent-light-1
+    cursor: not-allowed
+.error
+    color: colors.$accent-dark
+    font-weight: 500
+.error-msg
+    margin-top: 10px
+
+
+
+
+
+// Language: sass
+// Path: src\style\_typography.sass
