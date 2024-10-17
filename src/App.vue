@@ -1,10 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import NavMenu from './components/NavMenu.vue';
 </script>
 
 <template>
   <header>
+    <NavMenu />
   </header>
 
   <RouterView />
@@ -32,7 +34,7 @@ body
     min-height: 100vh
     text-rendering: optimizeLegibility
 .container
-    max-width: 1280px
+    max-width: 1080px
     width: 95%
     margin-inline: auto
 

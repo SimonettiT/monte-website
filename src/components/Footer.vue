@@ -1,5 +1,5 @@
 <script setup>
-import InstagramLogo from "@/assets/icons/Instagram.vue";
+import InstagramLogo from "@/assets/icons/InstagramIcon.vue";
 import Linkedin from "@/assets/icons/Linkedin.vue";
 import MailLogo from "@/assets/icons/MailOutline.vue";
 

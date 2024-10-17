@@ -7,10 +7,8 @@ import ScrollTo from "@/components/ScrollTo.vue"
 
 // Icons
 import MenuHamburger from '@/assets/icons/MenuHamburger.vue'
-import Instagram from "@/assets/icons/Instagram.vue"
-import Linkedin from "@/assets/icons/Linkedin.vue"
-import MailOutline from "@/assets/icons/MailOutline.vue"
 import ArrowDown from "@/assets/icons/ArrowDown.vue"
+import PlayArrow from '@/assets/icons/PlayArrow.vue'
 
 // Watches for window resize to display the desktop/mobile menu
 const windowWidth = ref(window.innerWidth)
@@ -31,45 +29,30 @@ const toggleMobileNav = () => mobileNav.value = !mobileNav.value
                 <CoverImgBackground />
             </Suspense>
         </div>
-        <nav>
-            <div class="content__right-content">
-                <button @click="toggleMobileNav" title="Abrir Menú" class="menu__icon-btn">
-                    <MenuHamburger class="menu__icon" />
-                </button>
-            </div>
-            <transition name="mobile-nav">
-                    <ul v-show="mobileNav" class="mobile-nav__links">
-                        <router-link to="/" class="link mobile-nav__link" @click="toggleMobileNav()">Inicio</router-link>
-                        <router-link to="/capitulos" class="link mobile-nav__link" @click="toggleMobileNav()">Capítulos</router-link>
-                        <router-link to="/sobre-monte" class="link mobile-nav__link" @click="toggleMobileNav()">Sobre MONTE</router-link>
-                        <router-link to="/backstage" class="link mobile-nav__link" @click="toggleMobileNav()">Backstage</router-link>
-                        
-                    </ul>
-            </transition>
-        </nav>
+        
 
 
 
 
 
-        <div class="cover__content">
+        <div class="cover__content container">
 
             
             <div class="header__titles">
                 <img class="header__monte-logo" src="../assets/images/logo-word-white.png" alt="">
-                <h3>Proyecto Transmedia</h3>
+                <h4>Proyecto Transmedia</h4>
                 <div class="header__buttons">
                     <button class="btn">VER TRAILER</button>
                     <button class="btn btn-outline">CÓMO SE HIZO</button>
                 </div>
             </div>
             <div class="header__play-btn">
-                
+                <PlayArrow />
             </div>
-            <ScrollTo href="#main" :title="'Main content'">
-                <ArrowDown class="header__arrow-down" />
-            </ScrollTo>
         </div>
+        <ScrollTo href="#main" :title="'Main content'">
+            <ArrowDown class="header__arrow-down" />
+        </ScrollTo>
     </header>
 </template>
 
@@ -112,16 +95,6 @@ header
 .cover__content
     @include mixins.flex(row, space-between, center, nowrap)
     z-index: variables.$z-content-above
-nav
-    @include mixins.flex(row, space-between, center, nowrap)
-    width: calc(95% - 1.4rem)
-    margin-inline: auto
-    padding-top: 2rem
-    height: 5rem
-    h2
-        font-size: fonts.$font-lg
-        font-weight: fonts.$font-bold
-        height: 3rem
 .content__right-content
     @include mixins.flex(row, flex-end, center, nowrap)
     gap: 1rem
@@ -131,48 +104,11 @@ nav
 
 // Mobile Nav
 
-.mobile-nav__links
-    @include mixins.flex(column, flex-start, stretch, nowrap)
-    position: fixed
-    top: 0
-    left: 0
-    z-index: variables.$z-content-above
-    width: 300px
-    height: 100vh
-    max-width: 70vw
-    padding-top: 2rem
-    text-align: left
-    color: colors.$white
-    background-color: colors.$dark-shadow
-    h2
-        font-size: fonts.$font-lg
-        font-weight: fonts.$font-bold
-        height: 3.5rem
-        margin-left: 2rem
-    .mobile-nav__link
-        font-size: fonts.$font-md
-        padding-left: 2rem
-        padding-block: 1rem
-        border-right: 5px solid transparent
-        transition: all variables.$transition-fast
-        &:hover
-            border-right: 10px solid colors.$accent
-            background-color: colors.$dark
-.menu__icon-container
-    position: relative
-.menu__icon-btn
-    background: transparent
-    border: none
-    outline: none
-.menu__icon
-    color: colors.$white
-    width: 2rem
-    height: 2rem
-    cursor: pointer
+
 
 
 .header__titles
-    @include mixins.flex(column, center, center, nowrap)
+    @include mixins.flex(column, center, flex-start, nowrap)
     height: calc(100vh - 5rem)
     img.header__monte-logo
         width: 400px
@@ -187,10 +123,47 @@ nav
     .header__buttons
         @include mixins.flex(row, center, center, nowrap)
         gap: 1rem
-        margin-top: 2rem
+        margin-top: 0.5rem
+
+.header__play-btn
+    width: variables.$icon-xxxxl
+    height: variables.$icon-xxxxl
+    aspect-ratio: 1/1
+    max-width: 100px
+    margin: 0 auto
+    color: colors.$accent
+    background-color: colors.$accent
+    border-radius: 50%
+    cursor: pointer
+    svg
+        transition: color 0.5s
+        color: colors.$light
+        width: 60%
+        margin-top: 20%
+    &:hover
+        svg
+            color: colors.$light-shadow-2
+
 .header__arrow-down
     width: 70px
     position: absolute
     bottom: 20px
     left: calc(50% - 35px)
+
+@media (max-width: variables.$bkp-medium)
+    .cover__content
+        flex-direction: column
+        .header__titles
+            align-items: center
+            text-align: center
+            img.header__monte-logo
+                max-width: 90vw
+        .header__play-btn
+            display: none
+@media (max-width: variables.$bkp-small)
+    .cover__content .header__buttons
+        flex-direction: column
+        gap: 1rem
+        .btn
+            width: 80vw
 </style>
