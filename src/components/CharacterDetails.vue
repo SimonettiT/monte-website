@@ -96,7 +96,7 @@ const selectCharacter = (character) => {
         font-size: fonts.$font-xxl
         font-weight: bold
         line-height: 1
-        margin-bottom: 1rem
+        margin-bottom: variables.$section-gap
     .characters-rooster__list
         @include mixins.grid(3, 2, center, center)
         gap: 1rem
@@ -109,7 +109,7 @@ const selectCharacter = (character) => {
             
             img
                 width: 100%
-                max-width: 100px
+                max-width: 150px
                 height: auto
             p
                 font-size: fonts.$font-base
@@ -126,6 +126,7 @@ const selectCharacter = (character) => {
     .characters__selected-image
         width: 100%
         height: auto
+        min-height: 350px
     .characters__selected-info
         text-align: center
         h2

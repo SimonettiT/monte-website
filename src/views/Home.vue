@@ -5,6 +5,8 @@ import Synopsis from '@/components/Synopsis.vue'
 import Cover from "@/components/Cover.vue";
 import ChaptersAccess from "@/components/ChaptersAccess.vue";
 import MontePreviews from '@/components/MontePreviews.vue';
+import BackstageCalltoAction from "@/components/BackstageCalltoAction.vue";
+import SpotifyPlaylist from "@/components/SpotifyPlaylist.vue";
 
 </script>
 
@@ -17,6 +19,8 @@ import MontePreviews from '@/components/MontePreviews.vue';
 			<Synopsis />
 			<MontePreviews />
 			<CharacterDetails />
+			<BackstageCalltoAction />
+			<SpotifyPlaylist />
 		</section>
 	</main>
 </template>
