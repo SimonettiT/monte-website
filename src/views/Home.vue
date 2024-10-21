@@ -7,6 +7,7 @@ import ChaptersAccess from "@/components/ChaptersAccess.vue";
 import MontePreviews from '@/components/MontePreviews.vue';
 import BackstageCalltoAction from "@/components/BackstageCalltoAction.vue";
 import SpotifyPlaylist from "@/components/SpotifyPlaylist.vue";
+import Footer from "@/components/Footer.vue";
 
 </script>
 
@@ -21,6 +22,7 @@ import SpotifyPlaylist from "@/components/SpotifyPlaylist.vue";
 			<CharacterDetails />
 			<BackstageCalltoAction />
 			<SpotifyPlaylist />
+			<Footer />
 		</section>
 	</main>
 </template>
@@ -32,7 +34,6 @@ import SpotifyPlaylist from "@/components/SpotifyPlaylist.vue";
 @use '@/style/variables'
 
 .home-content
-    padding-bottom: 80px
     min-height: 100vh
 
 </style>

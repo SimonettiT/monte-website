@@ -1,69 +1,59 @@
 <script setup>
-import InstagramLogo from "@/assets/icons/InstagramIcon.vue";
-import Linkedin from "@/assets/icons/Linkedin.vue";
-import MailLogo from "@/assets/icons/MailOutline.vue";
-
-const currentYear = new Date().getFullYear();
+import InstagramIcon from '@/assets/icons/InstagramIcon.vue';
+import UBPLogo from '@/assets/icons/UBPLogo.vue';
+import YoutubeIcon from '@/assets/icons/YoutubeIcon.vue';
+import SpotifyIcon from '@/assets/icons/SpotifyIcon.vue';
+import CompactMONTELogo from '@/assets/icons/CompactMONTELogo.vue';
 </script>
 
 <template>
-	<footer>
-		<div class="footer__wrapper">
-			<section class="footer__section footer__identity">
-				<h4>
-					SIMONETTI
-					<br />
-					TOMÁS
-				</h4>
-				<div class="identity__description">
-					<p>Copyright © {{ currentYear }} - Todos los derechos reservados</p>
-				</div>
-			</section>
+    <footer>
+        <div class="footer__wrapper container">
+            <section class="footer__section footer__identity">
+                <CompactMONTELogo class="identity__logo"/>
+                <div class="identity__content">
+                    <p>MONTE © 2024 - Diseñado por <a href="https://simonettitomas.com/">Tomás Simonetti</a></p>
+                    <p>Proyecto Transmedia de Universidad Blas Pascal</p>
+                </div>
+            </section>
 
-			<section class="footer__section footer__nav">
-				<h5>Menú</h5>
-				<ul>
-					<li><RouterLink to="/">Inicio</RouterLink></li>
-					<li><RouterLink to="/about">Sobre Mí</RouterLink></li>
-					<li><RouterLink to="/resources">Recursos</RouterLink></li>
-					<li><RouterLink to="/contact">Contacto</RouterLink></li>
-				</ul>
-			</section>
+            <section class="footer__section footer__nav">
+                <h5>Menú</h5>
+                <ul>
+                    <li><RouterLink to="/">Inicio</RouterLink></li>
+                    <li><RouterLink to="/capitulos">Capítulos</RouterLink></li>
+                    <li><RouterLink to="/sobre-monte">Sobre MONTE</RouterLink></li>
+                    <li><RouterLink to="/backstage">Backstage</RouterLink></li>
+                </ul>
+            </section>
 
-			<section class="footer__section footer__social">
-				<h5>Mis redes</h5>
-				<ul>
-					<li>
-						<a
-							href="https://www.instagram.com/tomy.simonetti/"
-							target="_blank"
-							title="Instagram"
-						>
-							<InstagramLogo />
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.linkedin.com/in/tomas-simonetti/"
-							target="_blank"
-							title="Universidad Blas Pascal"
-						>
-							<Linkedin />
-						</a>
-					</li>
-					<li>
-						<a
-							href="mailto:contacto@simonettitomas.com"
-							target="_blank"
-							title="Universidad Blas Pascal"
-						>
-							<MailLogo />
-						</a>
-					</li>
-				</ul>
-			</section>
-		</div>
-	</footer>
+            <section class="footer__section footer__social">
+                <h5>Síguenos</h5>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/monteserieweb/" target="_blank" title="Instagram">
+                            <InstagramIcon />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank" title="Canal MONTE en Youtube">
+                            <YoutubeIcon />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/playlist/149yIcZLbLUFCyghNBEs6Q?si=1a13e18c132c466b" target="_blank" title="Playlist de MONTE en Spotify">
+                            <SpotifyIcon />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.ubp.edu.ar/" target="_blank" title="Universidad Blas Pascal">
+                            <UBPLogo />
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
 </template>
 <style lang="sass" scoped>
 @use "@/style/variables"
@@ -72,24 +62,18 @@ const currentYear = new Date().getFullYear();
 @use "@/style/fonts"
 footer
     background-color: colors.$dark
+    color: colors.$light
     .footer__wrapper
         @include mixins.flex(row, space-between, flex-start, nowrap)
         padding: 2rem 3rem
-        width: 95%
-        max-width: 1280px
-        margin-inline: auto
-        @media (max-width: variables.$bkp-medium)
-            padding-inline: 1rem
 .footer__section
     text-align: left
-    color: colors.$white
     li
         list-style: none
         margin-block: 1rem
     h5
-        color: colors.getColor("accent-light")
+        color: colors.$accent
         user-select: none
-        text-transform: uppercase
         letter-spacing: 0.15rem
     a:hover
         text-decoration: underline
@@ -97,20 +81,25 @@ footer
 .footer__identity
     @include mixins.flex(column, center, flex-start, nowrap)
     max-width: 50%
-    h4
-        font-size: fonts.$font-xxl
-        line-height: 1
-        @media (max-width: variables.$bkp-medium)
-            font-size: fonts.$font-xl
-    .identity__description
+    .identity__logo
+        width: 40%
+        aspect-ratio: 1/1
+        margin-right: 1rem
+        margin-bottom: 1rem
+    .identity__content
         p
-            margin-top: 0.5rem
-            color: colors.$white
+            color: colors.$light
             font-size: fonts.$font-sm
+            a
+                text-decoration: underline
+                font-size: fonts.$font-sm
+                &:hover
+                    text-decoration: underline
 .footer__social
     ul
-        @include mixins.flex(row, flex-start, center, nowrap)
-        gap: 1rem
+        @include mixins.flex(row, flex-start, center, wrap)
+        gap: 0.5rem
+        max-width: 200px
         svg
             width: 2.5rem
             padding: 0.3rem
@@ -122,12 +111,14 @@ footer
     footer
         .footer__wrapper
             @include mixins.flex(column-reverse, center, center, nowrap)
-            gap: 1rem
+            gap: 2rem
             padding-inline: 0
     .footer__section
         text-align: center
     .footer__identity
         align-items: center
-        h4
-            font-size: fonts.$font-md
+        .identity__logo
+            width: 70%
+            margin-right: 0
+
 </style>
