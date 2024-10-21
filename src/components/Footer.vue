@@ -70,7 +70,6 @@ footer
     text-align: left
     li
         list-style: none
-        margin-block: 1rem
     h5
         color: colors.$accent
         user-select: none
@@ -106,19 +105,26 @@ footer
             transition: all variables.$transition-fast
             &:hover
                 padding: 0
-
-@media (max-width: variables.$bkp-small)
+.footer__nav
+    li
+        margin-block: 1rem
+@media (max-width: variables.$bkp-medium)
+    .footer__identity
+        .identity__logo
+            width: 60%
+@media (max-width: 610px)
     footer
         .footer__wrapper
-            @include mixins.flex(column-reverse, center, center, nowrap)
+            @include mixins.flex(column-reverse, center, center, wrap)
             gap: 2rem
             padding-inline: 0
     .footer__section
         text-align: center
     .footer__identity
         align-items: center
+        max-width: 100%
         .identity__logo
-            width: 70%
+            width: 50%
             margin-right: 0
 
 </style>
