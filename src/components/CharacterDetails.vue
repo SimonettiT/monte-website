@@ -3,40 +3,46 @@ import { ref } from 'vue';
 
 const characters = ref([
         {
-            name: 'Rick Sanchez',
+            name: 'Alfonsina',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-            description: 'El personaje principal de la serie, es un científico loco que arrastra a su tímido nieto Morty en peligrosas aventuras por el espacio y dimensiones paralelas.'
+            description: 'El personaje principal de la serie, es un científico loco que arrastra a su tímido nieto Morty en peligrosas aventuras por el espacio y dimensiones paralelas.',
+            color: 'lightblue'
         },
         {
-            name: 'Morty Smith',
+            name: 'Maxi',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-            description: 'Es el nieto de Rick, un niño tímido y poco seguro de sí mismo que siempre acompaña a su abuelo en sus aventuras.'
+            description: 'Es el nieto de Rick, un niño tímido y poco seguro de sí mismo que siempre acompaña a su abuelo en sus aventuras.',
+            color: 'green'
         },
         {
-            name: 'Summer Smith',
+            name: 'Franca',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
-            description: 'Es la hermana mayor de Morty y la nieta de Rick, es una adolescente que se preocupa por su imagen y su popularidad en la escuela.'
+            description: 'Es la hermana mayor de Morty y la nieta de Rick, es una adolescente que se preocupa por su imagen y su popularidad en la escuela.',
+            color: 'red'
         },
         {
-            name: 'Jerry Smith',
+            name: 'Pipo',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
-            description: 'Es el padre de Morty y el yerno de Rick, es un hombre inseguro y poco inteligente que trabaja en una empresa de publicidad.'
+            description: 'Es el padre de Morty y el yerno de Rick, es un hombre inseguro y poco inteligente que trabaja en una empresa de publicidad.',
+            color: 'purple'
         },
         {
-            name: 'Beth Smith',
+            name: 'Renata',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
-            description: 'Es la madre de Morty y la hija de Rick, es una cirujana de caballos que se siente frustrada por su matrimonio con Jerry.'
+            description: 'Es la madre de Morty y la hija de Rick, es una cirujana de caballos que se siente frustrada por su matrimonio con Jerry.',
+            color: 'blue'
         },
         {
-            name: 'Birdperson',
+            name: 'Dante',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
-            description: 'Es un amigo de Rick que es mitad pájaro y mitad persona, es un guerrero que ha luchado en muchas batallas.'
+            description: 'Es un amigo de Rick que es mitad pájaro y mitad persona, es un guerrero que ha luchado en muchas batallas.',
+            color: 'yellow'
         }
     ])
 
@@ -87,7 +93,8 @@ const selectCharacter = (character) => {
 @use "@/style/animations"
 
 .characters
-    background-image: linear-gradient(295deg, hsl(270, 100%, 31%) 0%, hsl(270, 100%, 28%) 14%, hsl(270, 100%, 24%) 29%, hsl(270, 100%, 21%) 43%, hsl(270, 100%, 17%) 57%, hsl(270, 100%, 13%) 71%, hsl(270, 100%, 10%) 86%, hsl(270, 100%, 6%) 100%)
+    transition: background-image 0.3s
+    background-image: linear-gradient(295deg, hsl(270, 100%, 31%) 0%, hsl(270, 100%, 28%) 14%, hsl(270, 100%, 24%) 29%, hsl(270, 100%, 21%) 43%, hsl(270, 100%, 17%) 57%, hsl(270, 100%, 13%) 71%, hsl(270, 100%, 10%) 86%, v-bind('selectedCharacter.color') 100%)
     padding-block: calc(variables.$section-gap * 3)
     color: colors.$light
     .characters__container
