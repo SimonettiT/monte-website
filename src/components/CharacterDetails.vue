@@ -51,13 +51,16 @@ const selectCharacter = (character) => {
     <section class="characters">
         <div class="characters__container container">
             <div class="characters__selected-container">
-                <transition-group name="fade">
+                <transition name="fade">
                     <img :key="selectedCharacter" :src="selectedCharacter.thumb" alt="" class="characters__selected-image">
+                </transition>
+                <transition name="fade">
                     <div :key="selectedCharacter" class="characters__selected-info">
                         <h2>{{ selectedCharacter.name }}</h2>
                         <p>{{ selectedCharacter.description }}</p>
                     </div>
-                </transition-group>
+                </transition>
+                
             </div>
             
             <div class="characters-rooster__container container">
