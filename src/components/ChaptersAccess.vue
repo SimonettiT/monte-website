@@ -3,17 +3,20 @@ import Lock from '@/assets/icons/Lock.vue'
 import PlayArrow from '@/assets/icons/PlayArrow.vue';
 </script>
 <template>
-    <section class="chapters-view container">
-        <h3>Capítulos</h3>
-        <div class="chapters__array">
-            <div class="chapters__thumbnail">
-                <PlayArrow class="chapters__icon"/>
-            </div>
-            <div class="chapters__thumbnail">
-                <Lock class="chapters__icon-lock chapters__icon"/>
-            </div>
-            <div class="chapters__thumbnail">
-                <Lock class="chapters__icon-lock chapters__icon"/>
+    <section class="chapters-view">
+        <div class="chapters-view__container container">
+
+            <h3>Capítulos</h3>
+            <div class="chapters__array">
+                <div class="chapters__thumbnail">
+                    <PlayArrow class="chapters__icon"/>
+                </div>
+                <div class="chapters__thumbnail">
+                    <Lock class="chapters__icon-lock chapters__icon"/>
+                </div>
+                <div class="chapters__thumbnail">
+                    <Lock class="chapters__icon-lock chapters__icon"/>
+                </div>
             </div>
         </div>
     </section>
@@ -26,7 +29,9 @@ import PlayArrow from '@/assets/icons/PlayArrow.vue';
 @use "@/style/mixins"
 @use "@/style/variables"
 .chapters-view
-    padding-block: variables.$section-gap
+    background-color: colors.$light
+.chapters-view__container
+    padding-block: variables.$section-gap calc(variables.$section-gap * 2.5)
     h3
         font-size: fonts.$font-xl
         color: colors.$dark

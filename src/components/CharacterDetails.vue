@@ -6,43 +6,43 @@ const characters = ref([
             name: 'Alfonsina',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-            description: 'El personaje principal de la serie, es un científico loco que arrastra a su tímido nieto Morty en peligrosas aventuras por el espacio y dimensiones paralelas.',
-            color: 'lightblue'
+            description: 'Siempre se asegura de que sus amigas lleguen a casa enteras. Estudia Psicología, no toca las drogas y, aunque es medio tímida, no tiene drama en decir lo que piensa. sufre de FOMO (miedo a perderse algo), por lo que sale más de lo que le gustaría. No se va de la fiesta, pero te deja clarísimo que quiere irse.',
+            color: '#37c8d5'
         },
         {
-            name: 'Maxi',
+            name: 'Máximo',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-            description: 'Es el nieto de Rick, un niño tímido y poco seguro de sí mismo que siempre acompaña a su abuelo en sus aventuras.',
-            color: 'green'
+            description: 'El dueño de la casa. Siempre busca vivir al límite. Estudia ingeniería, pero eso no es lo que le importa, su verdadera prioridad es la noche, la adrenalina, la fiesta. Ex rugbier, extrovertido, lindo y competitivo.',
+            color: '#08cd73'
         },
         {
             name: 'Franca',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
-            description: 'Es la hermana mayor de Morty y la nieta de Rick, es una adolescente que se preocupa por su imagen y su popularidad en la escuela.',
-            color: 'red'
+            description: 'La líder no oficial del grupo, siempre buscando ser el centro de atención. Estudia Derecho, le encanta tener el control y con su carisma consigue (casi siempre) lo que quiere. Una pick me girl detrás de la atención masculina. ',
+            color: '#e80404'
         },
         {
             name: 'Pipo',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
-            description: 'Es el padre de Morty y el yerno de Rick, es un hombre inseguro y poco inteligente que trabaja en una empresa de publicidad.',
-            color: 'purple'
+            description: 'El primero en organizar los planes del finde. Fue compañero de las chicas en el colegio y es el mejor amigo de Franca. siempre sabe cómo hacer que todos se sientan incluidos. Ex rugbier y carismático, aunque a veces puede ser invasivo. Nunca piensa en las consecuencias, solo en el finde que viene.',
+            color: '#d53782'
         },
         {
             name: 'Renata',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
-            description: 'Es la madre de Morty y la hija de Rick, es una cirujana de caballos que se siente frustrada por su matrimonio con Jerry.',
-            color: 'blue'
+            description: 'Siempre tiene algo para contar y es la primera en llevarse bien con todos. Estudia Diseño, es magnética y empática. Cuida a Alfonsina, aunque en la fiesta hace la suya. Esta noche su interés está en Lucio... y en pasarlo bien, cueste lo que cueste.',
+            color: '#0922e3'
         },
         {
             name: 'Dante',
             thumb: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
             miniThumb: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
-            description: 'Es un amigo de Rick que es mitad pájaro y mitad persona, es un guerrero que ha luchado en muchas batallas.',
-            color: 'yellow'
+            description: 'Amigo del barrio de Máximo, fue quien lo arrastró al mundo del techno y las fiestas más oscuras. No estudia, trabaja en un quiosco y se maneja solo desde chico. Esta noche, es él quien trae la droga. parece estar siempre un paso más allá, viviendo la suya.',
+            color: '#c9ac2a'
         }
     ])
 
@@ -57,9 +57,11 @@ const selectCharacter = (character) => {
     <section class="characters">
         <div class="characters__container container">
             <div class="characters__selected-container">
-                <transition name="fade">
-                    <img :key="selectedCharacter" :src="selectedCharacter.thumb" alt="" class="characters__selected-image">
-                </transition>
+                <div class="caracters__selected-imgcontainer">    
+                    <transition name="fade">
+                        <img :key="selectedCharacter" :src="selectedCharacter.thumb" alt="" class="characters__selected-image">
+                    </transition>
+                </div>
                 <transition name="fade">
                     <div :key="selectedCharacter" class="characters__selected-info">
                         <h2>{{ selectedCharacter.name }}</h2>
@@ -94,7 +96,7 @@ const selectCharacter = (character) => {
 
 .characters
     transition: background-image 0.3s
-    background-image: linear-gradient(295deg, hsl(270, 100%, 31%) 0%, hsl(270, 100%, 28%) 14%, hsl(270, 100%, 24%) 29%, hsl(270, 100%, 21%) 43%, hsl(270, 100%, 17%) 57%, hsl(270, 100%, 13%) 71%, hsl(270, 100%, 10%) 86%, v-bind('selectedCharacter.color') 100%)
+    background-image: linear-gradient(295deg, v-bind('selectedCharacter.color') 0%, hsl(270, 100%, 17%) 57%, hsl(270, 100%, 13%) 71%, hsl(270, 100%, 10%) 86%, hsl(270, 100%, 6%) 100%)
     padding-block: calc(variables.$section-gap * 3)
     color: colors.$light
     .characters__container
@@ -133,17 +135,20 @@ const selectCharacter = (character) => {
     @include mixins.flex(column, center, center, nowrap)
     width: 80%
     gap: 1rem
-    .characters__selected-image
+    background-color: none
+    .caracters__selected-imgcontainer
         width: 100%
         height: auto
         min-height: 350px
+    .characters__selected-image
+        width: 100%
     .characters__selected-info
         text-align: center
         h2
             font-size: fonts.$font-xxl
             font-weight: bold
         p
-            font-size: fonts.$font-base
+            font-size: fonts.$font-sm
 
 
 .fade-enter-active, .fade-leave-active

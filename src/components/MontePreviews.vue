@@ -4,10 +4,10 @@ const isSelected = ref(true);
 </script>
 
 <template>
-    <section class="serie-preview container">
-        <h3>FOTOGRAMAS DE LA SERIE</h3>
-        <img src="" alt="" class="preview__images-big">
-        <div class="preview__images-thumb">
+    <section class="serie-preview">
+        <h3>FOTOGRAMAS DE LA SERIE WEB</h3>
+        <img src="" alt="" class="preview__images-big container">
+        <div class="preview__images-thumb container">
             <img :class="{selected: isSelected}" src="" alt="">
             <img src="" alt="">
             <img src="" alt="">
@@ -25,6 +25,7 @@ const isSelected = ref(true);
 
 .serie-preview
     padding-block: variables.$section-gap
+    background-color: colors.$white
 .preview__images-big
     width: 100%
     height: auto

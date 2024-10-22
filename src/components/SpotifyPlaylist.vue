@@ -7,9 +7,9 @@ import SpotifyIcon from '@/assets/icons/SpotifyIcon.vue';
         <div class="spotify-playlist__container container">
             <iframe title="Playlist en Spotify de MONTE" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/149yIcZLbLUFCyghNBEs6Q?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <div class="spotify-playlist__text">
-                <h5>MÚSICA DE MONTE</h5>
-                <h3>ADENTRATE EN LA FIESTA</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni itaque dolores aut expedita laudantium cumque.</p>
+                <h5>EL RITMO DE MONTE</h5>
+                <h3>ESCUCHÁ LA FIESTA</h3>
+                <p>La noche es más intensa con la música adecuada, y esta noche suena un musicón. Escuchá la playlist de la fiesta y entendé porqué nadie puede dejar de bailar. </p>
                 <div class="spotify-playlist__link">
                     <label>ABRIR EN</label>
                     <a href=""><SpotifyIcon class="icon spotify-playlist__icon" /></a>

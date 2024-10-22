@@ -28,7 +28,7 @@ import NavMenu from './components/NavMenu.vue';
     text-align: center
     line-height: 1.5
 body
-    background-color: colors.$white
+    background-color: colors.$dark
     color: colors.$dark
     overflow: overlay
     min-height: 100vh
@@ -63,10 +63,9 @@ p, a
     width: 0.7rem
     background: transparent
 *::-webkit-scrollbar-thumb
-    background-color: colors.$dark-light-3
-    border-radius: 10px
+    background-color: colors.$light-shadow-3
     &:hover
-        background-color: colors.$dark-light-2
+        background-color: colors.$light-shadow-2
 
 
 //   When the modal is open, the body isn't scrollable.

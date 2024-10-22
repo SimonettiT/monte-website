@@ -10,14 +10,14 @@ import SpotifyIcon from "@/assets/icons/SpotifyIcon.vue";
             </div>
             <div class="synopsis__text">
                 <h5>SINOPSIS DE MONTE</h5>
-                <h2>FRASE CATCHY</h2>
+                <h2>CUIDADO CON LO QUE NO VES</h2>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit corrupti maiores iste enim consequatur,
-                    non deserunt esse soluta hic perspiciatis est odit numquam dolor repellat tempore.
+                    Una fiesta se convierte en el escenario de una noche que nadie va a olvidar. Lo que empieza como una noche de diversión para
+                    Alfonsina, Renata y Franca se convierte en una carrera desesperada por sobrevivir y encontrar respuestas.
+                    Cuando todo se desmorona, ¿hasta dónde están dispuestas a llegar para recuperar el control?
                 </p>
                 <a class="btn">
-                    <router-link to="/sobre-monte">ADENTRATE EN LA FIESTA</router-link>
+                    <router-link to="/sobre-monte">EL UNIVERSO MONTE</router-link>
                 </a>
             </div>
         </div>
