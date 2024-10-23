@@ -10,10 +10,10 @@ import SpotifyIcon from '@/assets/icons/SpotifyIcon.vue';
                 <h5>EL RITMO DE MONTE</h5>
                 <h3>ESCUCHÁ LA FIESTA</h3>
                 <p>La noche es más intensa con la música adecuada, y esta noche suena un musicón. Escuchá la playlist de la fiesta y entendé porqué nadie puede dejar de bailar. </p>
-                <div class="spotify-playlist__link">
+                <a href="https://open.spotify.com/playlist/149yIcZLbLUFCyghNBEs6Q?si=YH0rzNHYQ5aqhOYCJ0Gt8g" target="_blank" class="spotify-playlist__link">
                     <label>ABRIR EN</label>
-                    <a href=""><SpotifyIcon class="icon spotify-playlist__icon" /></a>
-                </div>
+                    <SpotifyIcon class="icon spotify-playlist__icon" />
+                </a>
             </div>
         </div>
     </section>
@@ -47,9 +47,9 @@ section.spotify-playlist
     .spotify-playlist__link
         @include mixins.flex(row, flex-start, center, nowrap)
         label
-            font-weight: fonts.$font-bold
+            cursor: pointer
+            font-weight: fonts.$font-semibold
             margin-right: 0.5rem
-        a
             padding-top: 6px
         .spotify-playlist__icon
             width: 32px
