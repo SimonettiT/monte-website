@@ -23,7 +23,7 @@ const toggleMobileNav = () => mobileNav.value = !mobileNav.value
 </script>
 
 <template>
-    <header>
+    <section class="home-header">
         <div class="cover__background">
             <Suspense>
                 <CoverImgBackground />
@@ -53,7 +53,7 @@ const toggleMobileNav = () => mobileNav.value = !mobileNav.value
         <ScrollTo href="#main" :title="'Main content'">
             <ArrowDown class="header__arrow-down" />
         </ScrollTo>
-    </header>
+    </section>
 </template>
 
 
@@ -67,7 +67,7 @@ const toggleMobileNav = () => mobileNav.value = !mobileNav.value
 @use "@/style/links"
 
 
-header
+.home-header
     height: 100vh
     min-height: 550px
     position: relative

@@ -1,20 +1,30 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import NavbarIcon from '@/assets/icons/MenuHamburger.vue';
 import NavMenu from './components/NavMenu.vue';
+
+const isNavOpen = ref(false);
 </script>
 
 <template>
-  <header>
-    <NavMenu />
-  </header>
+    <header>
+        <Transition name="fade">
+                <NavMenu v-if="isNavOpen" @closeNavMenu="isNavOpen = false"/>
+        </Transition>
+        <button class="nav__burger-btn" title="Abrir menú de navegación">
+            <NavbarIcon class="cover__icon" @click="isNavOpen = !isNavOpen"/>
+        </button>
+    </header>
 
-  <RouterView />
+    <RouterView />
 </template>
 
 <style lang="sass">
 @use "@/style/fonts"
 @use "@/style/links"
 @use "@/style/colors"
+@use "@/style/variables"
 *
     box-sizing: border-box
     margin: 0
@@ -72,6 +82,31 @@ p, a
 
 #modal-open
     overflow: hidden !important
+
+header 
+    position: absolute
+    width: 100%
+    height: auto
+    .nav__burger-btn
+        border: none
+        background-color: transparent
+        position: absolute
+        width: 3rem
+        aspect-ratio: 1
+        cursor: pointer
+        height: auto
+        top: 2rem
+        right: 2rem
+        z-index: variables.$z-content-above
+    svg
+        width: 100%
+        height: 100%
+        fill: colors.$light
+        color: colors.$light
+        user-select: none
+        &:hover
+            fill: colors.$accent
+            color: colors.$accent
 
 
 
