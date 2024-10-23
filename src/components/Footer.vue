@@ -28,7 +28,7 @@ import CompactMONTELogo from '@/assets/icons/CompactMONTELogo.vue';
             </section>
 
             <section class="footer__section footer__social">
-                <h5>Síguenos</h5>
+                <h5>Redes Sociales</h5>
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/monteserieweb/" target="_blank" title="Instagram">
