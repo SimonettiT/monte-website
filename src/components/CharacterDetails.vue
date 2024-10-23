@@ -1,46 +1,60 @@
 <script setup>
 import { ref } from 'vue';
+import Alfonsina from '@/assets/images/alfonsina.jpg';
+import Maximo from '@/assets/images/maximo.jpg';
+import Franca from '@/assets/images/franca.jpg';
+import Pipo from '@/assets/images/pipo.jpg';
+import Renata from '@/assets/images/renata.jpg';
+import Dante from '@/assets/images/dante.jpg';
+
+import AlfonsinaThumb from '@/assets/images/alfonsina-thumb.jpg';
+import MaximoThumb from '@/assets/images/maximo-thumb.jpg';
+import FrancaThumb from '@/assets/images/franca-thumb.jpg';
+import PipoThumb from '@/assets/images/pipo-thumb.jpg';
+import RenataThumb from '@/assets/images/renata-thumb.jpg';
+import DanteThumb from '@/assets/images/dante-thumb.jpg';
+
 
 const characters = ref([
         {
             name: 'Alfonsina',
-            thumb: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-            miniThumb: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+            thumb: Alfonsina,
+            miniThumb: AlfonsinaThumb,
             description: 'Siempre se asegura de que sus amigas lleguen a casa enteras. Estudia Psicología, no toca las drogas y, aunque es medio tímida, no tiene drama en decir lo que piensa. sufre de FOMO (miedo a perderse algo), por lo que sale más de lo que le gustaría. No se va de la fiesta, pero te deja clarísimo que quiere irse.',
             color: '#37c8d5'
         },
         {
             name: 'Máximo',
-            thumb: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-            miniThumb: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+            thumb: Maximo,
+            miniThumb: MaximoThumb,
             description: 'El dueño de la casa. Siempre busca vivir al límite. Estudia ingeniería, pero eso no es lo que le importa, su verdadera prioridad es la noche, la adrenalina, la fiesta. Ex rugbier, extrovertido, lindo y competitivo.',
-            color: '#08cd73'
+            color: '#006c17'
         },
         {
             name: 'Franca',
-            thumb: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
-            miniThumb: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
+            thumb: Franca,
+            miniThumb: FrancaThumb,
             description: 'La líder no oficial del grupo, siempre buscando ser el centro de atención. Estudia Derecho, le encanta tener el control y con su carisma consigue (casi siempre) lo que quiere. Una pick me girl detrás de la atención masculina. ',
-            color: '#e80404'
+            color: '#ef0000'
         },
         {
             name: 'Pipo',
-            thumb: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
-            miniThumb: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
+            thumb: Pipo,
+            miniThumb: PipoThumb,
             description: 'El primero en organizar los planes del finde. Fue compañero de las chicas en el colegio y es el mejor amigo de Franca. siempre sabe cómo hacer que todos se sientan incluidos. Ex rugbier y carismático, aunque a veces puede ser invasivo. Nunca piensa en las consecuencias, solo en el finde que viene.',
             color: '#d53782'
         },
         {
             name: 'Renata',
-            thumb: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
-            miniThumb: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
+            thumb: Renata,
+            miniThumb: RenataThumb,
             description: 'Siempre tiene algo para contar y es la primera en llevarse bien con todos. Estudia Diseño, es magnética y empática. Cuida a Alfonsina, aunque en la fiesta hace la suya. Esta noche su interés está en Lucio... y en pasarlo bien, cueste lo que cueste.',
             color: '#0922e3'
         },
         {
             name: 'Dante',
-            thumb: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
-            miniThumb: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
+            thumb: Dante,
+            miniThumb: DanteThumb,
             description: 'Amigo del barrio de Máximo, fue quien lo arrastró al mundo del techno y las fiestas más oscuras. No estudia, trabaja en un quiosco y se maneja solo desde chico. Esta noche, es él quien trae la droga. parece estar siempre un paso más allá, viviendo la suya.',
             color: '#c9ac2a'
         }
@@ -139,6 +153,7 @@ const selectCharacter = (character) => {
     .caracters__selected-imgcontainer
         width: 100%
         height: auto
+        max-height: 550px
         min-height: 350px
     .characters__selected-image
         width: 100%
@@ -150,11 +165,36 @@ const selectCharacter = (character) => {
         p
             font-size: fonts.$font-sm
 
+@media (max-width: variables.$bkp-medium)
+    .characters .characters__container
+        gap: 2rem
+        .characters__selected-container
+            margin-top: 5rem
+            width: 100%
+            .characters__selected-info
+                h2
+                    font-size: fonts.$font-xl
+    .characters-rooster__selection-container
+        .characters-rooster__list
+            grid-template-columns: repeat(2, 1fr)
+            gap: 1rem
+
+
+@media (max-width: variables.$bkp-small-medium)
+    .characters .characters__container
+        flex-direction: column-reverse
+        .characters__selected-container
+            margin-top: 0
+        .caracters__selected-imgcontainer
+            width: 70%
+        .characters-rooster__selection-container
+            .characters-rooster__list
+                grid-template-columns: repeat(3, 1fr)
+                gap: 2rem
+
 
 .fade-enter-active, .fade-leave-active
     transition: opacity .25s ease-in-out
-
-
 .fade-enter-to, .fade-leave-to
     opacity: 0
 </style>
