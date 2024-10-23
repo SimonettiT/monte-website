@@ -26,7 +26,7 @@ import SpotifyIcon from "@/assets/icons/SpotifyIcon.vue";
             <div class="synopsis__redes-icons">
                 <a href="https://www.instagram.com/monteserieweb/" alt="Instagram de Monte" target="_blank"><InstagramIcon class="synopsis__icon"/></a> 
                 <a href="" alt="YouTube de Monte" target="_blank"><YoutubeIcon class="synopsis__icon"/></a>
-                <a href="https://open.spotify.com/playlist/149yIcZLbLUFCyghNBEs6Q?si=dcaf783e2dfa4bd6" alt="Spotify de Monte" target="_blank"><SpotifyIcon class="synopsis__icon"/></a>
+                <a href="https://open.spotify.com/user/31ndonbd5qi234gbvo62qdco72zm?si=a6cb453281924f4a" alt="Spotify de Monte" target="_blank"><SpotifyIcon class="synopsis__icon"/></a>
             </div>
         </div>
     </section>

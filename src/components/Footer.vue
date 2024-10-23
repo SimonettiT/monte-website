@@ -41,7 +41,7 @@ import CompactMONTELogo from '@/assets/icons/CompactMONTELogo.vue';
                         </a>
                     </li>
                     <li>
-                        <a href="https://open.spotify.com/playlist/149yIcZLbLUFCyghNBEs6Q?si=1a13e18c132c466b" target="_blank" title="Playlist de MONTE en Spotify">
+                        <a href="https://open.spotify.com/user/31ndonbd5qi234gbvo62qdco72zm?si=a6cb453281924f4a" target="_blank" title="Playlist de MONTE en Spotify">
                             <SpotifyIcon />
                         </a>
                     </li>

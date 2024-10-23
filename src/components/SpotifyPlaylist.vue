@@ -5,7 +5,7 @@ import SpotifyIcon from '@/assets/icons/SpotifyIcon.vue';
 <template>
     <section class="spotify-playlist">
         <div class="spotify-playlist__container container">
-            <iframe title="Playlist en Spotify de MONTE" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/149yIcZLbLUFCyghNBEs6Q?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="Playlist en Spotify de MONTE" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2EHzvNE9jHeyuFGPfEz0pT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <div class="spotify-playlist__text">
                 <h5>EL RITMO DE MONTE</h5>
                 <h3>ESCUCHÁ LA FIESTA</h3>
