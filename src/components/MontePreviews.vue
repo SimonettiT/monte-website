@@ -5,15 +5,17 @@ const isSelected = ref(true);
 
 <template>
     <section class="serie-preview">
-        <h3>FOTOGRAMAS DE LA SERIE WEB</h3>
-        <img src="" alt="" class="preview__images-big container">
-        <div class="preview__images-thumb container">
-            <img :class="{selected: isSelected}" src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="serie-preview__container container">
+            <h3>FOTOGRAMAS DE LA SERIE WEB</h3>
+            <img src="" alt="" class="preview__images-big">
+            <div class="preview__images-thumb">
+                <img :class="{selected: isSelected}" src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
         </div>
     </section>
 </template>
@@ -34,13 +36,21 @@ const isSelected = ref(true);
 img
     background-color: colors.$light
     min-width: 50px
-    height: 100px
+    height: 97.5px
     aspect-ratio: 16/9
 .preview__images-thumb
-    @include mixins.flex(row, center, center, nowrap)
+    @include mixins.flex(row, center, center, wrap)
     gap: 0.5rem
     img
         cursor: pointer
     .selected
         border: 2px solid colors.$accent-light-2
+@media (max-width: variables.$bkp-medium)
+    .serie-preview
+        padding-block: variables.$section-gap
+        .preview__images-thumb
+            gap: 0.25rem
+            img
+                height: 60px
+
 </style>

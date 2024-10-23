@@ -30,10 +30,8 @@ section.spotify-playlist
     background-color: colors.$accent-dark
     color: colors.$white
     .spotify-playlist__container
-        display: grid
-        grid-template-columns: 1fr 1fr
+        @include mixins.flex(row, space-between, center, nowrap)
         gap: 2rem
-        align-items: center
         text-align: left
 .spotify-playlist__text
     h5
@@ -71,4 +69,17 @@ iframe
     &:hover
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4)
         transition: box-shadow 0.3s
+@media (max-width: variables.$bkp-medium)
+    section
+        padding-block: calc(variables.$section-gap * 2)
+        .spotify-playlist
+            .spotify-playlist__container
+                flex-direction: column-reverse
+                text-align: center
+                gap: 1rem
+            .spotify-playlist__link
+                justify-content: center
+            .spotify-playlist__text h3
+                margin-bottom: 1rem
+            
 </style>
