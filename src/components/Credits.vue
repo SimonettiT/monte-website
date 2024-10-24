@@ -113,13 +113,13 @@ section.credits
     color: colors.$dark
     padding-block: 5rem 7rem
 .credits__main-crew
-    @include mixins.grid(4, 2, stretch, center)
+    @include mixins.grid(4, 2, stretch, start)
     gap: 2rem
     margin-bottom: calc(variables.$section-gap * 2)
     @media (max-width: variables.$bkp-small-medium)
-        @include mixins.grid(3, 1, stretch, center)
+        @include mixins.grid(3, 1, stretch, start)
     @media (max-width: variables.$bkp-small)
-        @include mixins.grid(2, 1, stretch, center)
+        @include mixins.grid(2, 1, stretch, start)
     img
         width: 100%
         margin-bottom: 0.5rem
@@ -129,9 +129,10 @@ section.credits
         aspect-ratio: 1
     h4
         font-size: fonts.$font-md
-        height: 4rem
         padding-block: auto
         transition: color 0.5s
+        @media (max-width: 1000px)
+            height: 4rem
     .credits__person:hover h4
         color: colors.$accent
     p
