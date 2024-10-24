@@ -65,6 +65,21 @@ onMounted(() => {
     fill: colors.$accent-dark
     color: colors.$accent-dark
     user-select: none
+    &
+        animation: glitch 1s linear infinite
+        &:before,
+        &:after
+            content: attr(title)
+            position: absolute
+            left: 0
+        &:before
+            animation: glitchTop 1s linear infinite
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+        &:after
+            animation: glitchBotom 1.5s linear infinite
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+            -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
 .close-icon
     position: absolute
     top: 2rem
@@ -118,9 +133,9 @@ onMounted(() => {
 
 @keyframes glitch
     2%,64%
-        transform: translate(2px,0) skew(0deg)
+        transform: translate(0px,0) skew(0deg)
     4%,60%
-        transform: translate(-2px,0) skew(0deg)
+        transform: translate(0px,0) skew(0deg)
     62%
         transform: translate(0,0) skew(5deg)
 
