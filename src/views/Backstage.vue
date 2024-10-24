@@ -1,4 +1,5 @@
 <script setup>
+import BackstageInstagram from '@/components/BackstageInstagram.vue';
 import Credits from '@/components/Credits.vue';
 import MontePreviews from '@/components/MontePreviews.vue';
 
@@ -51,6 +52,8 @@ import MontePreviews from '@/components/MontePreviews.vue';
                     </div>
                 </div>
             </section>
+
+            <BackstageInstagram />
 
         </main>
     </div>
