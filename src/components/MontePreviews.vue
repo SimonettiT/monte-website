@@ -14,6 +14,13 @@ import Frame4Thumb from '@/assets/images/frames/frame-04-thumb.jpg';
 import Frame5Thumb from '@/assets/images/frames/frame-05-thumb.jpg';
 import Frame6Thumb from '@/assets/images/frames/frame-06-thumb.jpg';
 
+const props = defineProps({
+    title: {
+        type: String,
+        required: true
+    }
+})
+
 const frames = ref([
     {
         id: 1,
@@ -57,7 +64,7 @@ const selectFrame = (frame) => {
 <template>
     <section class="serie-preview">
         <div class="serie-preview__container container">
-            <h3>FOTOGRAMAS DE LA SERIE WEB</h3>
+            <h3>{{ title }}</h3>
             <img :src="selectedFrame.src" alt="" class="preview__images-big" loading="lazy" />
             <div class="preview__images-thumb">
                 <img @click="selectFrame(frame)" v-for="frame in frames" :class="{ selected: selectedFrame === frame }" :src="frame.thumbSrc" alt="" loading="lazy">
@@ -70,10 +77,15 @@ const selectFrame = (frame) => {
 @use "@/style/variables"
 @use "@/style/mixins"
 @use "@/style/colors"
+@use "@/style/fonts"
 
 .serie-preview
     padding-block: variables.$section-gap
     background-color: colors.$white
+    color: colors.$dark
+    h3
+        font-size: fonts.$font-lg
+        font-weight: fonts.$font-semibold
 .preview__images-big
     width: 100%
     height: auto
