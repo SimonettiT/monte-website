@@ -8,14 +8,14 @@ const isNavOpen = ref(false);
 </script>
 
 <template>
-    <header>
+    <div class="header-nav">
         <Transition name="fade">
                 <NavMenu v-if="isNavOpen" @closeNavMenu="isNavOpen = false"/>
         </Transition>
         <button class="nav__burger-btn" title="Abrir menú de navegación">
             <NavbarIcon class="cover__icon" @click="isNavOpen = !isNavOpen"/>
         </button>
-    </header>
+    </div>
 
     <RouterView />
 </template>
@@ -83,7 +83,7 @@ p, a
 #modal-open
     overflow: hidden !important
 
-header 
+.header-nav
     position: absolute
     width: 100%
     height: auto

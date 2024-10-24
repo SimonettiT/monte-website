@@ -15,10 +15,12 @@ import Footer from "@/components/Footer.vue";
 	<main>
 		
 		<section class="home-content">
-			<Cover />
+			<header>
+				<Cover />
+			</header>
 			<ChaptersAccess />
 			<Synopsis />
-			<MontePreviews />
+			<MontePreviews title="FOTOGRAMAS DE LA SERIE WEB"/>
 			<CharacterDetails />
 			<BackstageCalltoAction />
 			<SpotifyPlaylist />
