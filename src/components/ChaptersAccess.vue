@@ -1,6 +1,10 @@
 <script setup>
+import { ref } from 'vue'
+import { useChaptersStore } from '@/stores/chapters';
 import Lock from '@/assets/icons/Lock.vue'
 import PlayArrow from '@/assets/icons/PlayArrow.vue';
+
+const chaptersStore = useChaptersStore();
 </script>
 <template>
     <section class="chapters-view">
@@ -8,14 +12,10 @@ import PlayArrow from '@/assets/icons/PlayArrow.vue';
 
             <h3>Capítulos</h3>
             <div class="chapters__array">
-                <div class="chapters__thumbnail">
-                    <PlayArrow class="chapters__icon"/>
-                </div>
-                <div class="chapters__thumbnail">
-                    <Lock class="chapters__icon-lock chapters__icon"/>
-                </div>
-                <div class="chapters__thumbnail">
-                    <Lock class="chapters__icon-lock chapters__icon"/>
+                <div class="chapters__thumbnail" v-for="chapter in chaptersStore.chapters">
+                    <PlayArrow v-if="chapter.isAvailable === true" class="chapters__icon"/>
+                    <Lock v-else="chapter.isAvailable" class="chapters__icon-lock chapters__icon"/>
+                    <!-- <button class="link">VER TEASER</button> -->
                 </div>
             </div>
         </div>
@@ -48,6 +48,7 @@ import PlayArrow from '@/assets/icons/PlayArrow.vue';
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5)
         transition: box-shadow 0.3s
         cursor: pointer
+        // background-image: v-bind("'url('chapter.videoThumbnail')'")
         &:hover
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
         
