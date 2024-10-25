@@ -2,6 +2,7 @@
 import BackstageInstagram from '@/components/BackstageInstagram.vue';
 import Credits from '@/components/Credits.vue';
 import MontePreviews from '@/components/MontePreviews.vue';
+import PatreonsBackground from '@/assets/images/monte-rifa.png';
 
 
 </script>
@@ -55,6 +56,17 @@ import MontePreviews from '@/components/MontePreviews.vue';
 
             <BackstageInstagram />
 
+            <section class="financing-callto">
+                <div class="financing-callto__container container" :style="{ backgroundImage: 'url(' + PatreonsBackground + ')' }">
+                    <div class="financing-callto__wrapper">
+                        <h3>¿CÓMO SE FINANCIÓ MONTE?</h3>
+                        <a class="btn" href="">
+                            <router-link >CONOCE A NUESTROS PATREONS</router-link>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
         </main>
     </div>
 </template>
@@ -95,4 +107,23 @@ import MontePreviews from '@/components/MontePreviews.vue';
             font-weight: fonts.$font-bold
         h5, p
             font-weight: fonts.$font-semibold
+
+section.financing-callto
+    padding-block: variables.$section-gap calc(variables.$section-gap * 3)
+    background-color: colors.$white
+    .financing-callto__container
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+        background-size: cover
+        background-position: center
+        border-radius: 0 0 50px 0
+        .financing-callto__wrapper
+            @include mixins.flex(column, center, center, nowrap)
+            width: 100%
+            height: 100%
+            backdrop-filter: brightness(80%) blur(1px)
+            padding-block: 5rem
+            border-radius: 0 0 50px 0
+        h3
+            font-size: fonts.$font-xl
+            margin-bottom: 2rem
 </style>
