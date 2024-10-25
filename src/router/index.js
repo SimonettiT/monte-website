@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import AboutMonte from '@/views/AboutMonte.vue'
-import Backstage from '@/views/Backstage.vue'
-import Chapters from '@/views/Chapters.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,7 +33,13 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Chapters.vue')
     },
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      top: 0 ,
+      behavior: 'smooth'
+    }
+  }
 })
 
 export default router
