@@ -24,7 +24,6 @@ import Footer from "@/components/Footer.vue";
 			<CharacterDetails />
 			<BackstageCalltoAction />
 			<SpotifyPlaylist />
-			<Footer />
 		</section>
 	</main>
 </template>

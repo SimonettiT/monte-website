@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import NavbarIcon from '@/assets/icons/MenuHamburger.vue';
 import NavMenu from './components/NavMenu.vue';
+import Footer from './components/Footer.vue';
 
 const isNavOpen = ref(false);
 </script>
@@ -18,6 +19,7 @@ const isNavOpen = ref(false);
     </div>
 
     <RouterView />
+    <Footer />
 </template>
 
 <style lang="sass">
