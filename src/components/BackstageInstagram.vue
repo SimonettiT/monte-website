@@ -6,7 +6,7 @@ import InstagramIcon from '@/assets/icons/InstagramIcon.vue';
 <template>
     <section class="callto-ig">
         <div class="callto-ig__container container">
-            <img src="" alt="" class="callto-ig__thumb">
+            <div src="" alt="" class="callto-ig__thumb"></div>
             <div class="callto-ig__text">
                 <h5>CONOCE TODO EL PROCESO DE MONTE</h5>
                 <h3>EL BACKSTAGE</h3>
@@ -27,7 +27,7 @@ import InstagramIcon from '@/assets/icons/InstagramIcon.vue';
 @use '@/style/mixins'
 @use '@/style/variables'
 
-.callto-ig
+
 section.callto-ig
     padding-block: calc(variables.$section-gap * 3)
     background-color: colors.$white
@@ -61,15 +61,18 @@ section.callto-ig
             width: 32px
             height: 32px
             margin-left: 0.5rem
-img.callto-ig__thumb
+.callto-ig__thumb
     border-radius: 12px
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
     transition: box-shadow 0.3s
-    background-color: colors.$dark
     width: 100%
     max-width: 450px
     height: 300px
-    object-fit: cover
+    width: 45%
+    background-color: colors.$accent
+    background: url('@/assets/images/instagram-monte.png') no-repeat center center
+    background-size: cover
+    background-position: top
     &:hover
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4)
         transition: box-shadow 0.3s
