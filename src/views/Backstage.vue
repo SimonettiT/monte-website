@@ -120,7 +120,7 @@ section.financing-callto
             @include mixins.flex(column, center, center, nowrap)
             width: 100%
             height: 100%
-            backdrop-filter: brightness(80%) blur(1px)
+            backdrop-filter: brightness(70%) blur(1px)
             padding-block: 5rem
             border-radius: 0 0 50px 0
         h3

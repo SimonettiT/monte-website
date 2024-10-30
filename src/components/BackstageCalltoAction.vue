@@ -8,7 +8,9 @@ import BackstageBackground2 from '@/assets/images/backstage-portrait-2.jpg';
         <div class="backstage-actioncall__container container">
             <h2 class="backstage-actioncall__title">¿CÓMO SE REALIZÓ MONTE?</h2>
             <p class="backstage-actioncall__description">CONOCÉ TODO EL TRABAJO HECHO PARA LLEGAR A TU PANTALLA</p>
-            <button class="btn">VER EL DETRÁS DE ESCENA</button>
+            <router-link to="/backstage">
+                <button class="btn">VER EL DETRÁS DE ESCENA</button>
+            </router-link>
         </div>
 
     </section>
