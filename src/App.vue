@@ -40,7 +40,7 @@ const isNavOpen = ref(false);
     line-height: 1.5
 body
     background-color: colors.$dark
-    color: colors.$dark
+    color: colors.$light
     overflow: overlay
     min-height: 100vh
     text-rendering: optimizeLegibility
