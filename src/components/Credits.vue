@@ -1,45 +1,54 @@
 <script setup>
 import { ref } from 'vue';
 
+// import JoseIMG from '@/assets/images/prod-team/jose.jpg';
+import MartiIMG from '@/assets/images/prod-team/marti.jpg';
+import MaleIMG from '@/assets/images/prod-team/male.jpg';
+import FeliIMG from '@/assets/images/prod-team/feli.jpg';
+import MatiIMG from '@/assets/images/prod-team/mati.jpg';
+import JustiIMG from '@/assets/images/prod-team/justi.jpg';
+import CandeIMG from '@/assets/images/prod-team/cande.jpg'; 
+import TomyIMG from '@/assets/images/prod-team/tomy.jpg';
+
 const mainCrew = ref([
     {
         name: 'Josefina Bett',
-        img: 'josefina-bett.jpg',
+        img: 'jose',
         roles: ['Directora', 'Productora', 'Guionista']
     },
     {
         name: 'Martina Degiovanni',
-        img: 'martina-degiovanni.jpg',
+        img: MartiIMG,
         roles: ['Directora', 'Productora', 'Guionista'],
     },
     {
         name: 'Malena Llabot',
-        img: 'malena-llabot.jpg',
+        img: MaleIMG,
         roles: ['Directora', 'Productora', 'Guionista'],
     },
     {
         name: 'Felipe Lorenzatti',
-        img: 'mariana-wainstein.jpg',
+        img: FeliIMG,
         roles: ['Directora', 'Productora', 'Guionista'],
     },
     {
         name: 'Matías Elizondo',
-        img: 'mariana-wainstein.jpg',
+        img: MatiIMG,
         roles: ['Directora', 'Productora', 'Guionista'],
     },
     {
         name: 'Justina Vazquez',
-        img: 'mariana-wainstein.jpg',
+        img: JustiIMG,
         roles: ['Directora', 'Productora', 'Guionista'],
     },
     {
         name: 'Candela Nogueira',
-        img: 'mariana-wainstein.jpg',
+        img: CandeIMG,
         roles: ['Directora', 'Productora', 'Guionista'],
     },
     {
         name: 'Tomás Simonetti',
-        img: 'mariana-wainstein.jpg',
+        img: TomyIMG,
         roles: ['Directora', 'Productora', 'Guionista'],
     },
 ]);
@@ -86,7 +95,7 @@ const crew = ref([
 
             <div class="credits__main-crew">
                 <div v-for="person in mainCrew" class="credits__person">
-                    <img :src="`../assets/images/crew/${person.img}`" alt="">
+                    <img :src="person.img" :alt="person.name">
                     <h4>{{ person.name }}</h4>
                     <p v-for="role in person.roles">{{ role }}</p>
                 </div>
@@ -124,9 +133,10 @@ section.credits
         width: 100%
         margin-bottom: 0.5rem
         background-color: colors.$light-shadow-1
-        width: 100%
         height: auto
-        aspect-ratio: 1
+        aspect-ratio: 4/5
+        border-radius: 0 0 20px 0
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px
     h4
         font-size: fonts.$font-md
         padding-block: auto
