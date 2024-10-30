@@ -2,6 +2,19 @@
 import InstagramIcon from "@/assets/icons/InstagramIcon.vue";
 import YoutubeIcon from "@/assets/icons/YoutubeIcon.vue";
 import SpotifyIcon from "@/assets/icons/SpotifyIcon.vue";
+
+const props = defineProps({
+    background: {
+        type: String,
+        required: false,
+        default: "#fff"
+    },
+    textcolor: {
+        type: String,
+        required: false,
+        default: "#05000a"
+    }
+})
 </script>
 <template>
     <section class="synopsis">
@@ -41,8 +54,8 @@ import SpotifyIcon from "@/assets/icons/SpotifyIcon.vue";
 @use "@/style/variables"
 
 section.synopsis
-    background-color: colors.$dark
-    color: colors.$light
+    background-color: v-bind(background)
+    color: v-bind(textcolor)
     padding-block: calc(variables.$section-gap * 3)
 
 .synopsis__content
@@ -62,7 +75,7 @@ section.synopsis
         p
             font-size: fonts.$font-base
             font-weight: fonts.$font-light
-            margin-bottom: 3rem
+            margin-bottom: 2rem
     .synopsis__thumbnail
         width: 45%
         height: 300px
@@ -81,7 +94,7 @@ section.synopsis
         width: 2rem
         height: 2rem
     .synopsis__icon
-        color: colors.$light
+        color: v-bind(textcolor)
         transition: all variables.$transition-fast
         &:hover
             color: colors.$accent

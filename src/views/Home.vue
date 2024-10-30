@@ -19,7 +19,7 @@ import Footer from "@/components/Footer.vue";
 				<Cover />
 			</header>
 			<ChaptersAccess />
-			<Synopsis />
+			<Synopsis background="#100020" textcolor="#f2f2f2"/>
 			<MontePreviews title="FOTOGRAMAS DE LA SERIE WEB"/>
 			<CharacterDetails />
 			<BackstageCalltoAction />

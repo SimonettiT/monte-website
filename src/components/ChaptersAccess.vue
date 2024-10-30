@@ -5,6 +5,19 @@ import Lock from '@/assets/icons/Lock.vue'
 import PlayArrow from '@/assets/icons/PlayArrow.vue';
 
 const chaptersStore = useChaptersStore();
+
+const props = defineProps({
+    background: {
+        type: String,
+        required: false,
+        default: "#F2F2F2"
+    },
+    textcolor: {
+        type: String,
+        required: false,
+        default: "#05000a"
+    }
+})
 </script>
 <template>
     <section class="chapters-view">
@@ -29,7 +42,8 @@ const chaptersStore = useChaptersStore();
 @use "@/style/mixins"
 @use "@/style/variables"
 .chapters-view
-    background-color: colors.$light
+    background-color: v-bind(background)
+    color: v-bind(textcolor)
 .chapters-view__container
     padding-block: variables.$section-gap calc(variables.$section-gap * 2.5)
     h3

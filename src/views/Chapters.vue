@@ -55,7 +55,7 @@ const selectedChapter = ref(chapters.value[0])
             <p>{{ selectedChapter.synopsis }}</p>
         </section>
         <ChaptersAccess />
-        <Synopsis />
+        <Synopsis background="#fff" textcolor="#05000a"/>
     </main>
 </template>
 
@@ -79,6 +79,7 @@ main
 section.chapter-info
     color: colors.$white
     text-align: left
+    padding-block: 4rem 5rem
     h2
         text-transform: uppercase
 </style>
