@@ -54,37 +54,121 @@ const mainCrew = ref([
 ]);
 const crew = ref([
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'Morena Pretto',
+        role: 'Alfosina'
     },
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'María Paz Fernández',
+        role: 'Franca'
     },
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'Mariana Martos',
+        role: 'Renata'
     },
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'Nicolás Grosso',
+        role: 'Máximo'
     },
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'Facundo Rivero',
+        role: 'Dante'
     },
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'Emilio Agüero',
+        role: 'Pipo'
     },
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'Cata Beles',
+        role: 'Asist. Producción'
     },
     {
-        name: 'Mariana Wainstein',
-        role: 'Alfonsina'
+        name: 'Caro Maldonado',
+        role: 'Asist. Producción'
     },
+    {
+        name: 'Valen Rodrigues',
+        role: 'Asist. Video'
+    },
+    {
+        name: 'Cruz Ortiz',
+        role: 'Asist. Video'
+    },
+    {
+        name: 'Jose Richard',
+        role: 'Asist. Video'
+    },
+    {
+        name: 'Gena Bertona',
+        role: 'Asist. Sonido'
+    },
+    {
+        name: 'Lu Altamira',
+        role: 'Asist. Sonido'
+    },
+    {
+        name: 'Lara Arias',
+        role: 'A.D. Actoral'
+    },
+    {
+        name: 'Francesca Taborda',
+        role: 'Continuidad'
+    },
+    {
+        name: 'Mati Bernardi',
+        role: 'Continuidad'
+    },
+    {
+        name: 'Justi Sánchez',
+        role: 'Continuidad'
+    },
+    {
+        name: 'Cris Luhning',
+        role: 'Runner y Utilero'
+    },
+    {
+        name: 'Carola Llabot',
+        role: 'Maquillaje'
+    },
+    {
+        name: 'Rocío Gomez',
+        role: 'Maquillaje'
+    },
+    {
+        name: "Santino Cuestas",
+        role: "Cámara Backstage"
+    },
+    {
+        name: "Antenor Casas",
+        role: "Cámara Backstage"
+    }
+])
+const extra = ref([
+    "Joaquín Carreras",
+    "Julieta Gattas",
+    "Gordo Cruz",
+    "Madgalena Tobal",
+    "Fran Cabial",
+    "Juana (amiga vicky)",
+    "Lerda",
+    "Vicky Vazquez",
+    "Juan Bonadeo",
+    "Vale Trifonoff",
+    "Cata Ferrucci",
+    "Clemen Vocos",
+    "Valen Rossini",
+    "Marti Silvestro",
+    "Santino Cossar",
+    "Abril Eizikovits",
+    "Sayan",
+    "Geral Chauvet",
+    "Joaquín Saracco",
+    "Floren",
+    "Facu Sosaloyola",
+    "Agos Alasino",
+    "Amiel",
+    "Lara Ferreyra",
+    "Juan Diego Casali",
+    "Tomas Faraón",
 ])
 </script>
 
@@ -101,10 +185,16 @@ const crew = ref([
                 </div>
             </div>
             <div class="credits__crew">
-                <p v-for="person in crew" class="credits__person">
-                    <span class="person-name">{{ person.name }}</span>
-                     - 
-                    <span class="person-role">{{ person.role }}</span>
+                <div v-for="person in crew" class="credits__person">
+                    <p class="person-name">{{ person.name }}</p>
+                    <p class="person-role">{{ person.role }}</p>
+                </div>
+            </div>
+            <h3>Extras</h3>
+            <div class="credits__extra">
+
+                <p v-for="person in extra" class="credits__person">
+                    {{ person }}
                 </p>
             </div>
         </div>
@@ -150,18 +240,37 @@ section.credits
 
 
 .credits__crew
-    @include mixins.flex(row, space-evenly, center, wrap)
-    gap: 0.5rem
+    @include mixins.flex(row, space-between, center, wrap)
+    gap: 0.5rem 2.5rem
+    .credits__person
+        font-size: fonts.$font-sm
+        @media (max-width: 1000px)
+            height: 4rem
+        .person-name
+            font-weight: fonts.$font-regular
+            transition: color 0.5s
+        .person-role
+            text-transform: uppercase
+            font-weight: fonts.$font-bold
+            font-size: fonts.$font-sm
     .credits__person:hover .person-name
         color: colors.$accent
-
+    
     .person-name
         font-weight: bold
         transition: color 0.5s
+        font-size: fonts.$font-md
     .person-role
         text-transform: uppercase
         font-weight: normal
-
-        
+h3
+    margin-block: 2rem 1rem
+.credits__extra
+    @include mixins.flex(row, space-evenly, center, wrap)
+    gap: 0.5rem
+    color: inherit
+    transition: color 0.5s ease-in-out
+    .credits__person:hover
+        color: colors.$accent
 
 </style>
