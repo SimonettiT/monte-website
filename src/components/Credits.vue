@@ -49,7 +49,7 @@ const mainCrew = ref([
     {
         name: 'Tomás Simonetti',
         img: TomyIMG,
-        roles: ['Sonido', 'Dirección de Post-Producción', 'Post-Prod. de Sonido', 'Web Design'],
+        roles: ['Sonido', 'Dir. de Post-Producción', 'Post-Prod. de Sonido', 'Web Design'],
     },
 ]);
 const crew = ref([
