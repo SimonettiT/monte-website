@@ -14,42 +14,42 @@ const mainCrew = ref([
     {
         name: 'Josefina Bett',
         img: 'jose',
-        roles: ['Directora', 'Productora', 'Guionista']
+        roles: ['Dirección', 'Guion']
     },
     {
         name: 'Martina Degiovanni',
         img: MartiIMG,
-        roles: ['Directora', 'Productora', 'Guionista'],
+        roles: [''],
     },
     {
         name: 'Malena Llabot',
         img: MaleIMG,
-        roles: ['Directora', 'Productora', 'Guionista'],
+        roles: ['Producción', 'Dirección de Arte', 'Guion', ],
     },
     {
         name: 'Felipe Lorenzatti',
         img: FeliIMG,
-        roles: ['Directora', 'Productora', 'Guionista'],
+        roles: [''],
     },
     {
         name: 'Matías Elizondo',
         img: MatiIMG,
-        roles: ['Directora', 'Productora', 'Guionista'],
+        roles: [''],
     },
     {
         name: 'Justina Vazquez',
         img: JustiIMG,
-        roles: ['Directora', 'Productora', 'Guionista'],
+        roles: [''],
     },
     {
         name: 'Candela Nogueira',
         img: CandeIMG,
-        roles: ['Directora', 'Productora', 'Guionista'],
+        roles: ['Casting', 'Dirección de Actores', 'Guion'],
     },
     {
         name: 'Tomás Simonetti',
         img: TomyIMG,
-        roles: ['Directora', 'Productora', 'Guionista'],
+        roles: ['Sonido', 'Dirección de Post-Producción', 'Post-Prod. de Sonido', 'Web Design'],
     },
 ]);
 const crew = ref([
