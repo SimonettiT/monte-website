@@ -186,8 +186,8 @@ const extra = ref([
             </div>
             <div class="credits__crew">
                 <div v-for="person in crew" class="credits__person">
-                    <p class="person-name">{{ person.name }}</p>
                     <p class="person-role">{{ person.role }}</p>
+                    <p class="person-name">{{ person.name }}</p>
                 </div>
             </div>
             <h3>Extras</h3>
@@ -241,7 +241,7 @@ section.credits
 
 .credits__crew
     @include mixins.flex(row, space-between, center, wrap)
-    gap: 0.5rem 2.5rem
+    gap: 2rem 2.5rem
     .credits__person
         font-size: fonts.$font-sm
         @media (max-width: 1000px)
@@ -253,6 +253,7 @@ section.credits
             text-transform: uppercase
             font-weight: fonts.$font-bold
             font-size: fonts.$font-sm
+            line-height: 0.3
     .credits__person:hover .person-name
         color: colors.$accent
     
