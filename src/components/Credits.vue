@@ -269,9 +269,10 @@ h3
 .credits__extra
     @include mixins.flex(row, space-evenly, center, wrap)
     gap: 0.5rem
-    color: inherit
-    transition: color 0.5s ease-in-out
-    .credits__person:hover
-        color: colors.$accent
+    .credits__person
+        color: inherit
+        transition: color 0.2s
+        &:hover
+            color: colors.$accent
 
 </style>

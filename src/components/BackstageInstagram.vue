@@ -8,9 +8,9 @@ import InstagramIcon from '@/assets/icons/InstagramIcon.vue';
         <div class="callto-ig__container container">
             <div src="" alt="" class="callto-ig__thumb"></div>
             <div class="callto-ig__text">
-                <h5>CONOCE TODO EL PROCESO DE MONTE</h5>
-                <h3>EL BACKSTAGE</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat ipsa iste temporibus ipsam omnis harum necessitatibus distinctio qui nesciunt natus porro voluptatibus enim rerum, ipsum soluta commodi quae error quasi.</p>
+                <h5>EL BACKSTAGE</h5>
+                <h3>CUANDO LAS CÁMARAS SE APAGAN</h3>
+                <p>Conocé el proceso completo detrás de Monte: desde la idea inicial hasta cada detalle del rodaje. Mirá entrevistas con los actores, los desafíos de cada área y todos esos datos que no ves en pantalla. Descubrí el otro lado de la historia y seguí el backstage en nuestro Instagram.</p>
                 <a href="https://www.instagram.com/monteserieweb/" target="_blank" class="instagram__link">
                     <label>ABRIR EN</label>
                     <InstagramIcon class="icon instagram__icon" />
@@ -39,7 +39,8 @@ section.callto-ig
 .callto-ig__text
     width: 60%
     h5
-        font-weight: fonts.$font-regular
+        font-weight: fonts.$font-semibold
+        color: colors.$accent-light-1
     h3
         font-weight: fonts.$font-bold
         font-size: fonts.$font-xl

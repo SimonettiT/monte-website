@@ -38,7 +38,7 @@ import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
         <section class="mundo-monte" :style="{ backgroundImage: 'url(' + AboutMonteBackground + ')'}" >
             <div class="mundo-monte__container container">
                 <div class="mundo-monte__item item-right">
-                    <h3>FRASE CATCHY</h3>
+                    <h3>CÓRDOBA. UNQUILLO. 2024</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam aliquid cumque aspernatur est. Fugit ratione amet perspiciatis necessitatibus dignissimos nostrum est.</p>
                 </div>
 
