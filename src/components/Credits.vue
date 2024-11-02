@@ -34,7 +34,7 @@ const mainCrew = ref([
     {
         name: 'Matías Elizondo',
         img: MatiIMG,
-        roles: [''],
+        roles: ['Director de Fotografía', 'Gaffer', 'Cámara', 'Colorista'],
     },
     {
         name: 'Justina Vazquez',
@@ -44,12 +44,12 @@ const mainCrew = ref([
     {
         name: 'Candela Nogueira',
         img: CandeIMG,
-        roles: ['Casting', 'Dirección de Actores', 'Guion'],
+        roles: ['Casting', 'Dirección de Actores', 'Guion', 'Edición'],
     },
     {
         name: 'Tomás Simonetti',
         img: TomyIMG,
-        roles: ['Sonido', 'Dir. de Post-Producción', 'Post-Prod. de Sonido', 'Web Design'],
+        roles: ['Director de Sonido', 'Director de Post-Producción', 'Web Design', 'Efectos Especiales'],
     },
 ]);
 const crew = ref([

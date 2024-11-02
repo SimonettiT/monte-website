@@ -127,7 +127,6 @@ section.mundo-monte
         @include mixins.flex(column, space-between, normal, nowrap)
         gap: 2rem
         height: 100%
-    .mundo-monte__item
     .item-right
         text-align: right
         margin-inline: auto 0
