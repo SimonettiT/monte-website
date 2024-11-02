@@ -14,7 +14,7 @@ const mainCrew = ref([
     {
         name: 'Josefina Bett',
         img: 'jose',
-        roles: ['Dirección', 'Guion']
+        roles: ['Directora', 'Guionista']
     },
     {
         name: 'Martina Degiovanni',
@@ -24,7 +24,7 @@ const mainCrew = ref([
     {
         name: 'Malena Llabot',
         img: MaleIMG,
-        roles: ['Producción', 'Dirección de Arte', 'Guion', ],
+        roles: ['Productora', 'Directora de Arte', 'Guionista', ],
     },
     {
         name: 'Felipe Lorenzatti',
@@ -44,7 +44,7 @@ const mainCrew = ref([
     {
         name: 'Candela Nogueira',
         img: CandeIMG,
-        roles: ['Casting', 'Dirección de Actores', 'Guion', 'Edición'],
+        roles: ['Casting', 'Directora de Actores', 'Guionista', 'Editora'],
     },
     {
         name: 'Tomás Simonetti',
@@ -70,40 +70,48 @@ const crew = ref([
         role: 'Máximo'
     },
     {
-        name: 'Facundo Rivero',
-        role: 'Dante'
-    },
-    {
         name: 'Emilio Agüero',
         role: 'Pipo'
     },
     {
-        name: 'Cata Beles',
+        name: 'Facundo Rivero',
+        role: 'Dante'
+    },
+    {
+        name: 'Catalina Beles',
         role: 'Asist. Producción'
     },
     {
-        name: 'Caro Maldonado',
+        name: 'Carolina Maldonado',
         role: 'Asist. Producción'
     },
     {
-        name: 'Valen Rodrigues',
-        role: 'Asist. Video'
+        name: 'Brenda Ruchtein',
+        role: 'Asist. Producción'
+    },
+    {
+        name: 'Valentina Rodrigues',
+        role: 'Asist. Fotografía'
     },
     {
         name: 'Cruz Ortiz',
-        role: 'Asist. Video'
+        role: 'Asist. Fotografía'
+    },
+    // {
+    //     name: 'Jose Richard',
+    //     role: 'Asist. Fotografía'
+    // },
+    {
+        name: 'Brenda Ruchtein',
+        role: 'Asist. Fotografía'
     },
     {
-        name: 'Jose Richard',
-        role: 'Asist. Video'
+        name: 'Genaro Bertona',
+        role: 'Sonido'
     },
     {
-        name: 'Gena Bertona',
-        role: 'Asist. Sonido'
-    },
-    {
-        name: 'Lu Altamira',
-        role: 'Asist. Sonido'
+        name: 'Lucía Altamira',
+        role: 'Sonido'
     },
     {
         name: 'Lara Arias',
@@ -114,24 +122,24 @@ const crew = ref([
         role: 'Continuidad'
     },
     {
-        name: 'Mati Bernardi',
+        name: 'Justina Sánchez',
         role: 'Continuidad'
     },
     {
-        name: 'Justi Sánchez',
+        name: 'Matilde Bernardi',
         role: 'Continuidad'
     },
     {
-        name: 'Cris Luhning',
-        role: 'Runner y Utilero'
+        name: 'Cristóbal Luhning',
+        role: 'Asistente de Arte'
     },
     {
         name: 'Carola Llabot',
-        role: 'Maquillaje'
+        role: 'Maquillaje y Peinado'
     },
     {
-        name: 'Rocío Gomez',
-        role: 'Maquillaje'
+        name: 'Rocío Gómez',
+        role: 'Maquillaje y Peinado'
     },
     {
         name: "Santino Cuestas",
@@ -140,35 +148,63 @@ const crew = ref([
     {
         name: "Antenor Casas",
         role: "Cámara Backstage"
+    },
+    {
+        name: "Carolina Maldonado",
+        role: "Cámara Backstage"
+    },
+    {
+        name: "Manuel González",
+        role: "Cámara Backstage",
     }
 ])
 const extra = ref([
-    "Joaquín Carreras",
-    "Julieta Gattas",
-    "Gordo Cruz",
-    "Madgalena Tobal",
-    "Fran Cabial",
-    "Juana (amiga vicky)",
-    "Lerda",
-    "Vicky Vazquez",
-    "Juan Bonadeo",
-    "Vale Trifonoff",
-    "Cata Ferrucci",
-    "Clemen Vocos",
-    "Valen Rossini",
-    "Marti Silvestro",
-    "Santino Cossar",
     "Abril Eizikovits",
-    "Sayan",
-    "Geral Chauvet",
-    "Joaquín Saracco",
-    "Floren",
-    "Facu Sosaloyola",
-    "Agos Alasino",
-    "Amiel",
-    "Lara Ferreyra",
+    "Agostina Alasino",
+    "Agustin Canelli",
+    "Amiel Unsain",
+    "Catalina Ferrucci",
+    "Carola Llabot",
+    "Clemente Vocos",
+    "Constanza Lorenzon",
+    "Cruz Fernández",
+    "Facundo Sosa Loyola",
+    "Florentina Jerez",
+    "Francisco Cabial",
+    "Geraldine Chauvet",
+    "Geronimo Skrzypeck",
+    "Gregorio Lerda",
+    "Ignacio Ardiles",
+    "Ignacio Piscitello",
+    "Irupe Lamanuzzi",
+    "Joaquín Carreras",
+    "Joaquín Leiranes",
+    "Joaquín Sacaracco",
+    "Juan Bonadeo",
     "Juan Diego Casali",
-    "Tomas Faraón",
+    "Juan García",
+    "Juana Reyna",
+    "Juliana Py",
+    "Julieta Gattas",
+    "Lara Ferreyra",
+    "Magdalena Tobal",
+    "Martina Silvestro",
+    "Maximo Romero Fausti",
+    "Nicole Saleme",
+    "Octavio Capdevilla",
+    "Pedro Carballo",
+    "Rafael Mammana",
+    "Rocío Gómez De Turris",
+    "Santiago Bulchi",
+    "Santino Cossar",
+    "Sayan Weemaels",
+    "Simbad Lamanuzzi",
+    "Tomás Capeloni",
+    "Tomás Faraon",
+    "Tomás Sánchez",
+    "Valentina Rossini",
+    "Valentina Trifonoff",
+    "Victoria Vazquez"
 ])
 </script>
 
