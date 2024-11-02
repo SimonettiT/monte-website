@@ -38,25 +38,25 @@ import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
         <section class="mundo-monte" :style="{ backgroundImage: 'url(' + AboutMonteBackground + ')'}" >
             <div class="mundo-monte__container container">
                 <div class="mundo-monte__item item-right">
-                    <h3>CÓRDOBA. UNQUILLO. 2024</h3>
+                    <h3>CÓRDOBA. 2024</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam aliquid cumque aspernatur est. Fugit ratione amet perspiciatis necessitatibus dignissimos nostrum est.</p>
                 </div>
 
                 <div class="mundo-monte__item item-center">
-                    <h3>BIENVENIDO A LA FIESTA DE TU VIDA</h3>
+                    <h3>BIENVENIDO A LA FIESTA DE MÁXIMO</h3>
                 </div>
                 
                 <div class="mundo-monte__item item-center">
-                    <h3>PERO NO TODO ES LO QUE PARECE SER</h3>
+                    <h3>LUCES Y RISAS QUE ESCONDEN ALGO MÁS</h3>
                 </div>
 
                 <div class="mundo-monte__item item-center">
-                    <h4>¿CUÁL ES LA LÍNEA A TRANSPASAR?</h4>
+                    <h4>TODOS QUIENES CREÍAS CONOCER CAMBIAN</h4>
                     <p>¿FIESTA? ¿DROGAS? ¿AMISTAD? ¿AMOR? <span class="item-accent item-bold">¿RAVE?</span></p>
                 </div>
 
                 <div class="mundo-monte__item item-left">
-                    <h3>FRASE CATCHY</h3>
+                    <h3>NO TE PIERDAS</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus culpa at eaque cumque laboriosam adipisci minus, nostrum totam ducimus distinctio nam ipsa, rerum veritatis.</p>
                 </div>
 
