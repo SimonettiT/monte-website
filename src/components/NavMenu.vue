@@ -96,6 +96,8 @@ onMounted(() => {
     width: 80%
     margin-inline: auto
     padding-top: 5rem
+    @media (max-width: variables.$bkp-small)
+        width: 90%
     .nav__links-section
         @include mixins.flex(column, center, flex-start, nowrap)
         @media (min-width: variables.$bkp-large) and (max-height: 630px)
@@ -125,6 +127,9 @@ onMounted(() => {
                 animation: glitchBotom 1.5s linear infinite
                 clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
                 -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+        @media (max-width: variables.$bkp-medium)
+            font-size: fonts.$font-xxl
+            letter-spacing: 0.2rem
     .nav__category-title
         z-index: variables.$z-modal-content
         letter-spacing: 0.5rem

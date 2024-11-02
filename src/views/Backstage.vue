@@ -32,9 +32,9 @@ import PatreonsBackground from '@/assets/images/monte-rifa.png';
                         <h3>531 PERSONAS</h3>
                         <h5 class="subtitle-accent">implicadas en la serie</h5>
                         <p>8 creadores</p>
-                        <p>20 asistentes</p>
+                        <p>17 asistentes</p>
                         <p>6 actores</p>
-                        <p>45 extras actorales</p>
+                        <p>43 extras actorales</p>
                         <p>342 inversores en la serie</p>
                     </div>
 
@@ -60,9 +60,7 @@ import PatreonsBackground from '@/assets/images/monte-rifa.png';
                 <div class="financing-callto__container container" :style="{ backgroundImage: 'url(' + PatreonsBackground + ')' }">
                     <div class="financing-callto__wrapper">
                         <h3>¿CÓMO SE FINANCIÓ MONTE?</h3>
-                        <a class="btn" href="">
-                            <router-link >CONOCE A NUESTROS PATREONS</router-link>
-                        </a>
+                        <router-link class="btn">CONOCE A NUESTROS PATREONS</router-link>
                     </div>
                 </div>
 
