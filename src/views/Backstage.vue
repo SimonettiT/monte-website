@@ -60,7 +60,7 @@ import PatreonsBackground from '@/assets/images/monte-rifa.png';
                 <div class="financing-callto__container container" :style="{ backgroundImage: 'url(' + PatreonsBackground + ')' }">
                     <div class="financing-callto__wrapper">
                         <h3>¿CÓMO SE FINANCIÓ MONTE?</h3>
-                        <router-link class="btn">CONOCE A NUESTROS PATREONS</router-link>
+                        <router-link to="/sponsors"class="btn">CONOCE A NUESTROS PATREONS</router-link>
                     </div>
                 </div>
 
