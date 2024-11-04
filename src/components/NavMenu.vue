@@ -26,6 +26,7 @@ onMounted(() => {
                         <RouterLink @click="closeNavMenu()" to="/capitulos" class="nav__link" title="Capítulos">Capítulos</RouterLink>
                         <RouterLink @click="closeNavMenu()" to="/sobre-monte" class="nav__link" title="Sobre MONTE">Sobre MONTE</RouterLink>
                         <RouterLink @click="closeNavMenu()" to="/backstage" class="nav__link" title="Backstage">Backstage</RouterLink>
+                        <RouterLink @click="closeNavMenu()" to="/sponsors" class="nav__link" title="Backstage">Sponsors</RouterLink>
                     </div>
                 </div>
             </Transition>
@@ -104,6 +105,8 @@ onMounted(() => {
             flex-direction: row
             width: 100%
             justify-content: space-between
+        @media (max-width: variables.$bkp-medium)
+            gap: 1rem
     .nav__link
         font-size: fonts.$font-xxxl
         letter-spacing: 0.3rem

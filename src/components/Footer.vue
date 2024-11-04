@@ -24,6 +24,7 @@ import CompactMONTELogo from '@/assets/icons/CompactMONTELogo.vue';
                     <li><RouterLink to="/capitulos">Capítulos</RouterLink></li>
                     <li><RouterLink to="/sobre-monte">Sobre MONTE</RouterLink></li>
                     <li><RouterLink to="/backstage">Backstage</RouterLink></li>
+                    <li><RouterLink to="/sponsors">Sponsors</RouterLink></li>
                 </ul>
             </section>
 
@@ -107,7 +108,7 @@ footer
                 padding: 0
 .footer__nav
     li
-        margin-block: 1rem
+        margin-block: 0.6rem
 @media (max-width: variables.$bkp-medium)
     .footer__identity
         .identity__logo
