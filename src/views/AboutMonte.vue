@@ -70,6 +70,18 @@ import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
 
         <CharacterDetails />
         <ChaptersAccess />
+
+        <section class="juego-maxi">
+            <div class="juego-maxi__container container">
+                <img src="../assets/images/maxi-juego.jpg" alt="Juego de Máximo en Genially">
+                <div class="juego-maxi__text">
+                    <h2>JUEGO DE MÁXIMO</h2>
+                    <p>¿Ya viste la serie? Jugá y conocé más a Máximo, locaciones y cosas re locas, no te amargues y entrá man. locaciones y cosas re locas, no te amargues y entrá man.</p>
+                    <a class="btn" href="https://view.genially.com/6727e488e9135eb3d7842f32/interactive-content-conoce-mas-a-maximo" target="_blank">JUGAR AHORA</a>
+                </div>
+            </div>
+        </section>
+
         <SpotifyPlaylist />
     </main>
 </template>
@@ -143,4 +155,31 @@ section.mundo-monte
     .header__monte-logo
         width: 600px
         max-width: 80vw
+
+.juego-maxi
+    background-color: colors.$light
+    padding-block: 1rem 4rem
+    .juego-maxi__container
+        @include mixins.flex(row-reverse, center, center, nowrap)
+        background-color: colors.$dark
+        gap: 2rem
+        text-align: right
+        border-radius: 0 0 50px 0
+        padding: 3rem
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px
+        h2
+            line-height: 1
+        img
+            width: 50%
+        p
+            margin-block: 2rem 3rem
+        @media (max-width: variables.$bkp-small-medium)
+            @include mixins.flex(column, center, center, nowrap)
+            text-align: center
+            padding: 1rem 2rem 3rem
+            gap: 0
+            img
+                width: 90%
+            p
+                margin-top: 1rem
 </style>
