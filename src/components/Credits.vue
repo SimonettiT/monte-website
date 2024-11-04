@@ -19,7 +19,7 @@ const mainCrew = ref([
     {
         name: 'Martina Degiovanni',
         img: MartiIMG,
-        roles: [''],
+        roles: ['Asistente de Dirección', 'Guionista', 'Editora'],
     },
     {
         name: 'Malena Llabot',
@@ -29,7 +29,7 @@ const mainCrew = ref([
     {
         name: 'Felipe Lorenzatti',
         img: FeliIMG,
-        roles: [''],
+        roles: ['Productor', 'Director de Arte', 'Guionista'],
     },
     {
         name: 'Matías Elizondo',
@@ -39,7 +39,7 @@ const mainCrew = ref([
     {
         name: 'Justina Vazquez',
         img: JustiIMG,
-        roles: [''],
+        roles: ['Cámara', 'Directora de Fotografía', 'Gaffer', 'Editora'],
     },
     {
         name: 'Candela Nogueira',
@@ -191,7 +191,7 @@ const extra = ref([
     "Martina Silvestro",
     "Maximo Romero Fausti",
     "Nicole Saleme",
-    "Octavio Capdevilla",
+    "Octavio Capdevila",
     "Pedro Carballo",
     "Rafael Mammana",
     "Rocío Gómez De Turris",
