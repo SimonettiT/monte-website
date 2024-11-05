@@ -69,13 +69,12 @@ iframe
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4)
         transition: box-shadow 0.3s
 @media (max-width: variables.$bkp-medium)
-    section
+    section.spotify-playlist
         padding-block: calc(variables.$section-gap * 2)
-        .spotify-playlist
-            .spotify-playlist__container
-                flex-direction: column-reverse
-                text-align: center
-                gap: 1rem
+        .spotify-playlist__container
+            flex-direction: column-reverse
+            text-align: center
+            gap: 1rem
             .spotify-playlist__link
                 justify-content: center
             .spotify-playlist__text h3

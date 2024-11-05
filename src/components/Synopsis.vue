@@ -103,17 +103,18 @@ section.synopsis
         flex-flow: column
         .synopsis__text
             width: 100%
+            text-align: center
+            p
+                font-size: fonts.$font-sm
         .synopsis__thumbnail
             width: 100%
             border-radius: 0
             margin-bottom: 2rem
-@media (max-width: variables.$bkp-small)
-    .synopsis__content .synopsis__text
-        p
-            font-size: fonts.$font-sm
         a.btn
             width: 90%
             margin: 0 auto
             display: block
             text-align: center
+        
+       
 </style>

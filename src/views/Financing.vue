@@ -530,7 +530,16 @@ section.financing__rifa
         p
             margin-block: 2rem
             max-width: 400px
-
+    @media (max-width: variables.$bkp-medium)
+        .financing__rifa-container
+            flex-direction: column
+            gap: 1rem
+            text-align: center
+            img
+                width: 90%
+                margin: 0 auto
+            p
+                margin-block: 0 2rem
 
 section.financing__contributors
     padding-block: 4rem

@@ -90,7 +90,7 @@ section.callto-ig
             width: 100%
             h3
                 margin-bottom: 1rem
-        img.callto-ig__thumb
+        .callto-ig__thumb
             width: 100%
             max-width: none
         .instagram__link
