@@ -9,6 +9,10 @@ import PatreonsBackground from '@/assets/images/monte-rifa.png';
 <template>
     <div class="backstage">
         <header class="backstage-cover">
+            <video autoplay muted loop id="backstageVideo">
+                <source src="../assets/backstage-cover.mp4" type="video/mp4">
+            </video>
+
             <h1>¿CÓMO SE REALIZÓ MONTE?</h1>
             <p>CONOCE A LOS CREADORES DE LA SERIE Y TODO EL TRABAJO HASTA TU PANTALLA</p>
             <button class="btn">VER EL VIDEO DETRÁS DE ESCENA</button>
@@ -82,6 +86,16 @@ import PatreonsBackground from '@/assets/images/monte-rifa.png';
         width: 100%
         min-height: 500px
         aspect-ratio: 16/9
+        max-height: 700px
+        #backstageVideo
+            position: absolute
+            right: 0
+            bottom: 0
+            min-width: 100%
+            min-height: 100%
+            object-fit: cover
+            z-index: -1
+            opacity: 0.3
         h1
             font-size: fonts.$font-xxxl
             line-height: 1
