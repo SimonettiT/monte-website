@@ -7,12 +7,13 @@ import InstagramIcon from '@/assets/icons/InstagramIcon.vue';
 import YoutubeIcon from '@/assets/icons/YoutubeIcon.vue';
 
 import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
+import MundoMonteCover from '@/assets/images/mundomonte-cover.jpg';
 
 
 </script>
 <template>
     <main>
-        <section class="about-cover">
+        <section class="about-cover" :style="{ backgroundImage: 'url(' + MundoMonteCover + ')'}">
             <h3>EL MUNDO DE</h3>
             <img class="header__monte-logo" src="../assets/images/logo-word-white.png" alt="">
             <h4>Proyecto Transmedia</h4>
@@ -94,6 +95,8 @@ import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
 
 section.about-cover
     background-color: #2C2C2C
+    background-position: center
+    background-size: cover
     @include mixins.flex(column, center, center, nowrap)
     color: colors.$light
     height: 80vh
