@@ -419,7 +419,7 @@ const contributors = ref([
                 <div class="financing__rifa-text">
                     <h2>RIFA DE MONTE</h2>
                     <p>Gracias a las marcas que nos apoyaron y a cada persona que contribuyó comprando una rifa. A todos, les damos nuestro más profundo agradecimiento ya que hoy, MONTE es un sueño hecho realidad.</p>
-                    <a href="" target="_blank" class="btn">CONOCÉ A LOS GANADORES</a>
+                    <a href="https://www.instagram.com/stories/highlights/18268516018218181/" target="_blank" class="btn">CONOCÉ A LOS GANADORES</a>
                 </div>
             </div>
         </section>
