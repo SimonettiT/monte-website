@@ -8,6 +8,7 @@ import MontePreviews from '@/components/MontePreviews.vue';
 import BackstageCalltoAction from "@/components/BackstageCalltoAction.vue";
 import SpotifyPlaylist from "@/components/SpotifyPlaylist.vue";
 import Footer from "@/components/Footer.vue";
+import FinancingCalltoAction from "@/components/FinancingCalltoAction.vue";
 
 </script>
 
@@ -21,6 +22,7 @@ import Footer from "@/components/Footer.vue";
 			<ChaptersAccess />
 			<Synopsis background="#100020" textcolor="#f2f2f2"/>
 			<MontePreviews title="FOTOGRAMAS DE LA SERIE WEB"/>
+			<FinancingCalltoAction />
 			<CharacterDetails />
 			<BackstageCalltoAction />
 			<SpotifyPlaylist />
