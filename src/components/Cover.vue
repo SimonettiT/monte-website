@@ -1,29 +1,43 @@
 <script setup>
-
+import { defineAsyncComponent, ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { onMounted, onUnmounted, computed, ref } from "vue"
 import CoverImgBackground from './CoverImgBackground.vue'
 import ScrollTo from "@/components/ScrollTo.vue"
 
 // Icons
-import MenuHamburger from '@/assets/icons/MenuHamburger.vue'
 import ArrowDown from "@/assets/icons/ArrowDown.vue"
 import PlayArrow from '@/assets/icons/PlayArrow.vue'
 
-// Watches for window resize to display the desktop/mobile menu
-const windowWidth = ref(window.innerWidth)
-const onWidthChange = () => windowWidth.value = window.innerWidth
-onMounted(() => window.addEventListener('resize', onWidthChange))
-onUnmounted(() => window.removeEventListener('resize', onWidthChange))
-const isMobile = computed(() => (windowWidth.value <= 750) ? true : false)
+const VideoModal = defineAsyncComponent(() => import ("@/components/VideoModal.vue"))
 
-const mobileNav = ref(false)
-const toggleMobileNav = () => mobileNav.value = !mobileNav.value
+const showVideoModal = ref(false);
+const videoModalURL = ref("");
+const videoModalTitle = ref("");
+
+const toggleVideoModal = () => {
+    showVideoModal.value = !showVideoModal.value
+    videoModalURL.value = "A8TLQrlZFnA";
+    videoModalTitle.value = "Trailer de Serie Web MONTE";
+}
+
+const bodyOverflow = computed(() => {
+    if(showVideoModal.value) {
+      return document.querySelector('body').style.overflow = 'hidden'
+    } else {
+      return document.querySelector('body').style.overflow = 'overlay'
+    }
+})
 
 </script>
 
 <template>
     <section class="home-header">
+        <VideoModal
+        v-if="showVideoModal"
+        :videoURL="videoModalURL"
+        :videoTitle="videoModalTitle"
+        @closeVideoModal="showVideoModal = false"
+        />
         <div class="cover__background">
             <Suspense>
                 <CoverImgBackground />
@@ -42,11 +56,11 @@ const toggleMobileNav = () => mobileNav.value = !mobileNav.value
                 <img class="header__monte-logo" src="../assets/images/logo-word-white.png" alt="">
                 <h4>Proyecto Transmedia</h4>
                 <div class="header__buttons">
-                    <button class="btn">VER TRAILER</button>
-                    <button class="btn btn-outline">CÓMO SE HIZO</button>
+                    <button class="btn" @click="toggleVideoModal()">VER TRAILER</button>
+                    <router-link to="/backstage" class="btn btn-outline">CÓMO SE HIZO</router-link>
                 </div>
             </div>
-            <div class="header__play-btn">
+            <div class="header__play-btn" @click="toggleVideoModal()">
                 <PlayArrow />
             </div>
         </div>
