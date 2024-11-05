@@ -5,12 +5,12 @@ import SpotifyIcon from '@/assets/icons/SpotifyIcon.vue';
 <template>
     <section class="spotify-playlist">
         <div class="spotify-playlist__container container">
-            <iframe title="Playlist en Spotify de MONTE" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2EHzvNE9jHeyuFGPfEz0pT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="Playlist en Spotify de MONTE" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7mroeAWyuDwVIdG3UWajlJ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <div class="spotify-playlist__text">
                 <h5>EL RITMO DE MONTE</h5>
                 <h3>ESCUCHÁ LA FIESTA</h3>
                 <p>La noche es más intensa con la música adecuada, y esta noche suena un musicón. Escuchá la playlist de la fiesta y entendé porqué nadie puede dejar de bailar. </p>
-                <a href="https://open.spotify.com/playlist/149yIcZLbLUFCyghNBEs6Q?si=YH0rzNHYQ5aqhOYCJ0Gt8g" target="_blank" class="spotify-playlist__link">
+                <a href="https://open.spotify.com/playlist/7mroeAWyuDwVIdG3UWajlJ?si=a3e4db0fc6bc44b8" target="_blank" class="spotify-playlist__link">
                     <label>ABRIR EN</label>
                     <SpotifyIcon class="icon spotify-playlist__icon" />
                 </a>
@@ -18,7 +18,6 @@ import SpotifyIcon from '@/assets/icons/SpotifyIcon.vue';
         </div>
     </section>
 </template>
-
 <style lang="sass" scoped>
 @use "@/style/colors"
 @use "@/style/fonts"

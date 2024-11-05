@@ -21,11 +21,11 @@ import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
         <section class="about-synopsis">
             <div class="about-synopsis__container">
                 <h5>SINOPSIS DE MONTE</h5>
-                <h2>FRASE CATCHY</h2>
-                <p>SINOPSIS DE MONTE MÁS DETALLADO. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sapiente, quaerat, reiciendis ab praesentium iusto quam vitae voluptate corporis dolore quis vel quidem dignissimos quia eaque excepturi sequi possimus beatae.</p>
+                <h2>¿QUÉ ESCONDE LA NOCHE?</h2>
+                <p>Una fiesta se convierte en el escenario de una noche inolvidable. Lo que comienza como una noche divertida para tres amigas se convierte rápidamente en una carrera desesperada por descubrir la verdad. Pero esta historia no se queda en la pantalla: conocé el universo de MONTE y explorá más a fondo a los personajes, los secretos y los escenarios que dan vida a esta serie web.</p>
     
                 <div class="synopsis__redes">
-                    <h5>CONOCE MÁS EN NUESTRAS REDES</h5>
+                    <h5>NUESTRAS REDES SOCIALES</h5>
                     <div class="synopsis__redes-icons">
                         <a href="https://www.instagram.com/monteserieweb/" alt="Instagram de Monte" target="_blank"><InstagramIcon class="synopsis__icon"/></a> 
                         <a href="" alt="YouTube de Monte" target="_blank"><YoutubeIcon class="synopsis__icon"/></a>
@@ -39,25 +39,25 @@ import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
             <div class="mundo-monte__container container">
                 <div class="mundo-monte__item item-right">
                     <h3>CÓRDOBA. 2024</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam aliquid cumque aspernatur est. Fugit ratione amet perspiciatis necessitatibus dignissimos nostrum est.</p>
+                    <p>En la casa de campo de la familia de Máximo, ubicada en Unquillo a solo 38 minutos de Córdoba Capital, se desata una fiesta en el lugar perfecto: sin vecinos que se quejen, sin perros que interrumpan y, sobre todo, sin padres que molesten.</p>
                 </div>
 
                 <div class="mundo-monte__item item-center">
-                    <h3>BIENVENIDO A LA FIESTA DE MÁXIMO</h3>
+                    <h3>LA FIESTA DE MÁXIMO TE ESPERA</h3>
                 </div>
                 
                 <div class="mundo-monte__item item-center">
-                    <h3>LUCES Y RISAS QUE ESCONDEN ALGO MÁS</h3>
+                    <h3>¿QUÉ ESCONDE LA NOCHE?</h3>
                 </div>
 
                 <div class="mundo-monte__item item-center">
                     <h4>TODOS QUIENES CREÍAS CONOCER CAMBIAN</h4>
-                    <p>¿FIESTA? ¿DROGAS? ¿AMISTAD? ¿AMOR? <span class="item-accent item-bold">¿RAVE?</span></p>
+                    <p><span class="item-accent item-bold">Sumergite en un laberinto lleno de tensiones ocultas </span></p>
                 </div>
 
                 <div class="mundo-monte__item item-left">
                     <h3>NO TE PIERDAS</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus culpa at eaque cumque laboriosam adipisci minus, nostrum totam ducimus distinctio nam ipsa, rerum veritatis.</p>
+                    <p>Mantente alerta, porque en MONTE, nada es lo que parece y el peligro está siempre al acecho. ¿En quién podrás confiar?</p>
                 </div>
 
                 <div class="mundo-monte__item item-center">
@@ -76,7 +76,7 @@ import AboutMonteBackground from '@/assets/images/about-monte-background.jpg';
                 <img src="../assets/images/maxi-juego.jpg" alt="Juego de Máximo en Genially">
                 <div class="juego-maxi__text">
                     <h2>JUEGO DE MÁXIMO</h2>
-                    <p>¿Ya viste la serie? Jugá y conocé más a Máximo, locaciones y cosas re locas, no te amargues y entrá man. locaciones y cosas re locas, no te amargues y entrá man.</p>
+                    <p>¿Ya viste la serie? Jugá y descubrí más sobre Máximo: su relación con las chicas, las anécdotas de la casa, su compleja dinámica familiar ¡y mucho más!</p>
                     <a class="btn" href="https://view.genially.com/6727e488e9135eb3d7842f32/interactive-content-conoce-mas-a-maximo" target="_blank">JUGAR AHORA</a>
                 </div>
             </div>
