@@ -24,6 +24,7 @@ import AlmaLolaEstetica from '@/assets/images/empresas/alma-lola-estetica.png';
 import AmaikaVelas from '@/assets/images/empresas/amaika-velas.png';
 import ChacoShoes from '@/assets/images/empresas/chaco-shoes.png';
 import Coquetas from '@/assets/images/empresas/coquetas-pd.png';
+import OrmaFocaccia from '@/assets/images/empresas/orma-focaccia.jpg';
 
 const empresas = ref([
     {
@@ -135,7 +136,13 @@ const empresas = ref([
         name: 'Coquetas Salón de Belleza',
         link: 'https://www.instagram.com/coquetas_pd/',
         img: Coquetas
+    },
+    {
+        name: 'Orma Focaccia',
+        link: 'https://www.instagram.com/ormafocaccia/',
+        img: OrmaFocaccia
     }
+
 
 ])
 
@@ -180,13 +187,12 @@ const contributors = ref([
     "Carolina de La Roza",
     "Carmela Echegaray",
     "Carmen Sindoni",
-    "Carolina Ledea",
-    "Carolina Romero",
     "Carpinteria sergio",
     "Celeste Bravo",
     "Cecilia Díaz",
     "Cecilia Morena",
     "Cecilia Tait",
+    "Celesta Gambacorta",
     "Cesar Ortiz",
     "Clemente Vazquez",
     "Clara Callejo",
@@ -314,6 +320,7 @@ const contributors = ref([
     "Nati Devoto",
     "Nelson Moreschi",
     "Nicolas Ahumada",
+    "Nicolás Bett",
     "Nicole Daza",
     "Noelia Lopez",
     "Noemi Bertello",
@@ -367,9 +374,10 @@ const contributors = ref([
     "Vicky Alcazar",
     "Virginia Asbert",
     "Virginia Martin",
+    "Vittorio Faure",
     "Viviana Altamirano",
     "Xime Masjoan",
-    "Yanina Seisdedos"
+    "Yanina Seisdedos",
 ])
 
 </script>
@@ -388,9 +396,9 @@ const contributors = ref([
 
                 <img class="financing-explanation-rifa" src="../assets/images/monte-rifa.png" alt="Rifa de MONTE">
                 <h2>¿CÓMO FINANCIAMOS MONTE?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repellat saepe ipsam eum voluptatibus voluptatum veniam laudantium ab molestiae nam, temporibus aspernatur at aliquam, reprehenderit quos possimus alias, provident commodi!</p>
+                <p>Para conseguir el presupuesto necesario para la realización de Monte todo el equipo se juntó y realizó una venta de rifas. Con la ayuda y donación de muchísimas marcas, empresas y emprendimientos, logramos tener más de 20 premios súper copados que hicieron que vendamos un total de 651 rifas.</p>
                 <div class="explanation__empresas">
-                    <h4>Empresas que confiaron en MONTE</h4>
+                    <h4>Marcas que confiaron en MONTE</h4>
                     <div class="financing__empresas-list">
                         <div v-for="empresa in empresas" class="financing__empresa-item">
                             <img :src="empresa.img" :alt="empresa.name" class="empresa__img">
@@ -402,7 +410,7 @@ const contributors = ref([
         </section>
 
         <section class="financing__quote">
-            <h4>A partir de las donaciones de empresas de toda Córdoba, pudimos financiar MONTE a través de rifas con premios increíbles.</h4>
+            <h4>A partir de las donaciones de marcas de toda Córdoba, pudimos financiar MONTE a través de rifas con premios increíbles.</h4>
         </section>
 
         <section class="financing__rifa">
@@ -410,8 +418,8 @@ const contributors = ref([
                 <img src="../assets/images/premios-rifa.jpg" alt="Premios de Rifa">
                 <div class="financing__rifa-text">
                     <h2>RIFA DE MONTE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus autem dolorum aliquam itaque tenetur quibusdam mollitia dolorem! Nam aut aliquam voluptatibus quaerat, reprehenderit ex magni nostrum mollitia eveniet ipsa quia!</p>
-                    <a href="" target="_blank" class="btn">CONOCE A LOS GANADORES</a>
+                    <p>Gracias a las marcas que nos apoyaron y a cada persona que contribuyó comprando una rifa. A todos, les damos nuestro más profundo agradecimiento ya que hoy, MONTE es un sueño hecho realidad.</p>
+                    <a href="" target="_blank" class="btn">CONOCÉ A LOS GANADORES</a>
                 </div>
             </div>
         </section>

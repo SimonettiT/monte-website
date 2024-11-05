@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-// import JoseIMG from '@/assets/images/prod-team/jose.jpg';
+import JoseIMG from '@/assets/images/prod-team/jose.jpg';
 import MartiIMG from '@/assets/images/prod-team/marti.jpg';
 import MaleIMG from '@/assets/images/prod-team/male.jpg';
 import FeliIMG from '@/assets/images/prod-team/feli.jpg';
@@ -13,7 +13,7 @@ import TomyIMG from '@/assets/images/prod-team/tomy.jpg';
 const mainCrew = ref([
     {
         name: 'Josefina Bett',
-        img: 'jose',
+        img: JoseIMG,
         roles: ['Directora', 'Guionista']
     },
     {
