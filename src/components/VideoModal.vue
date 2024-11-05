@@ -6,10 +6,6 @@ defineProps({
 		type: String,
 		required: true,
 	},
-	videoSource: {
-		type: String,
-		required: true,
-	},
 	videoTitle: {
 		default: "Video Player",
 		type: String,
@@ -34,7 +30,6 @@ onMounted(() => {
 				<CloseIcon class="modal-close__icon" />
 			</button>
 			<iframe
-				v-if="videoSource === 'youtube'"
 				:src="
 					'https://www.youtube-nocookie.com/embed/' +
 					videoURL +
@@ -46,13 +41,6 @@ onMounted(() => {
 				allowfullscreen
 			>
 			</iframe>
-			<iframe
-				title="Vimeo video player"
-				v-else-if="videoSource === 'vimeo'"
-				:src="'https://player.vimeo.com/video/' + videoURL"
-				frameborder="0"
-				allow="autoplay; fullscreen; picture-in-picture"
-			></iframe>
 		</div>
 	</Teleport>
 </template>
