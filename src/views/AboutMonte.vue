@@ -78,7 +78,7 @@ import MundoMonteCover from '@/assets/images/mundomonte-cover.jpg';
                 <div class="juego-maxi__text">
                     <h2>JUEGO DE MÁXIMO</h2>
                     <p>¿Ya viste la serie? Jugá y descubrí más sobre Máximo: su relación con las chicas, las anécdotas de la casa, su compleja dinámica familiar ¡y mucho más!</p>
-                    <a class="btn" href="https://view.genially.com/6727e488e9135eb3d7842f32/interactive-content-conoce-mas-a-maximo" target="_blank">JUGAR AHORA</a>
+                    <a class="btn" href="https://view.genially.com/6727e488e9135eb3d7842f32" target="_blank">JUGAR AHORA</a>
                 </div>
             </div>
         </section>
