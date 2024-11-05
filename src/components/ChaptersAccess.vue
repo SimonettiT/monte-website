@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useChaptersStore } from '@/stores/chapters';
 import Lock from '@/assets/icons/Lock.vue'
 import PlayArrow from '@/assets/icons/PlayArrow.vue';
+import MONTEThumbnail from '@/assets/images/monte-thumbnail.jpg';
 
 const chaptersStore = useChaptersStore();
 
@@ -18,6 +19,19 @@ const props = defineProps({
         default: "#05000a"
     }
 })
+
+const setSelectedChapter = (chapterID) => {
+        chaptersStore.selectedChapter.value = chaptersStore.chapters.find(chapter => chapter.chapterID === chapterID);
+        console.log(chaptersStore.selectedChapter.value)
+}
+
+const getThumbnail = (video) => {
+    if (video.isAvailable === true) {
+        return video.videoThumbnail;
+    } else {
+        return MONTEThumbnail;
+    }
+}
 </script>
 <template>
     <section class="chapters-view">
@@ -25,10 +39,21 @@ const props = defineProps({
 
             <h3>Capítulos</h3>
             <div class="chapters__array">
-                <div class="chapters__thumbnail" v-for="chapter in chaptersStore.chapters">
-                    <PlayArrow v-if="chapter.isAvailable === true" class="chapters__icon"/>
-                    <Lock v-else="chapter.isAvailable" class="chapters__icon-lock chapters__icon"/>
-                    <!-- <button class="link">VER TEASER</button> -->
+                <div 
+                    class="chapters__thumbnail" 
+                    v-for="chapter in chaptersStore.chapters" 
+                    :key="chapter.id">
+                    <img :src="getThumbnail(chapter)" loading="lazy" :alt="chapter.title">
+                    <router-link 
+                        v-if="chapter.isAvailable === true" 
+                        :to="{ name: 'Chapters' } "
+                        @click="setSelectedChapter(chapter.chapterID)"
+                        >
+                        <PlayArrow class="chapters__icon"/>
+                    </router-link>
+                    <div v-else>
+                        <Lock class="chapters__icon-lock chapters__icon"/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,6 +80,7 @@ const props = defineProps({
     @include mixins.flex(row, space-between, center, wrap)
     .chapters__thumbnail
         @include mixins.flex(column, center, center, nowrap)
+        position: relative
         aspect-ratio: 16/9
         width: 31%
         background-color: colors.$dark-shadow
@@ -62,23 +88,38 @@ const props = defineProps({
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5)
         transition: box-shadow 0.3s
         cursor: pointer
-        // background-image: v-bind("'url('chapter.videoThumbnail')'")
+        img
+            border-radius: 5px
+            transition: filter variables.$transition-fast
+            width: 100%
+            display: block
+            aspect-ratio: 231/130
         &:hover
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5)
         
         .chapters__icon
             height: variables.$icon-xxxl
-            max-height: 30%
+            // max-height: 30%
             color: colors.$light
             margin: auto auto
             transition: color 0.3s
+            position: absolute
+            width: 4rem
+            height: 4rem
+            top: calc(50% - 2rem)
+            left: calc(50% - 2rem)
+            z-index: 2
             &:hover 
                 color: colors.$accent-light-2
         .chapters__icon.chapters__icon-lock
             color: colors.$light
-            max-height: 25%
+            max-height: 34%
             &:hover
                 color: colors.$dark-light-2
+            @media (max-width: variables.$bkp-medium)
+                margin-top: 12px
+            @media (max-width: variables.$bkp-small)
+                margin-top: 0
 @media (max-width: variables.$bkp-small)
     .chapters-view h3
         text-align: center
