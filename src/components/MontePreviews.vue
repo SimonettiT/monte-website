@@ -1,71 +1,42 @@
 <script setup>
-import { ref } from 'vue';
-
-import Frame1 from '@/assets/images/frames/frame-01.jpg';
-import Frame2 from '@/assets/images/frames/frame-02.jpg';
-import Frame3 from '@/assets/images/frames/frame-03.jpg';
-import Frame4 from '@/assets/images/frames/frame-04.jpg';
-import Frame5 from '@/assets/images/frames/frame-05.jpg';
-import Frame6 from '@/assets/images/frames/frame-06.jpg';
-import Frame1Thumb from '@/assets/images/frames/frame-01-thumb.jpg';
-import Frame2Thumb from '@/assets/images/frames/frame-02-thumb.jpg';
-import Frame3Thumb from '@/assets/images/frames/frame-03-thumb.jpg';
-import Frame4Thumb from '@/assets/images/frames/frame-04-thumb.jpg';
-import Frame5Thumb from '@/assets/images/frames/frame-05-thumb.jpg';
-import Frame6Thumb from '@/assets/images/frames/frame-06-thumb.jpg';
+import { ref, watch, onMounted } from 'vue';
 
 const props = defineProps({
     title: {
         type: String,
         required: true
+    },
+    frames: {
+        type: Array,
+        required: true
     }
 })
 
-const frames = ref([
-    {
-        id: 1,
-        src: Frame1,
-        thumbSrc: Frame1Thumb
-    },
-    {
-        id: 2,
-        src: Frame2,
-        thumbSrc: Frame2Thumb
-    },
-    {
-        id: 3,
-        src: Frame3,
-        thumbSrc: Frame3Thumb
-    },
-    {
-        id: 4,
-        src: Frame4,
-        thumbSrc: Frame4Thumb
-    },
-    {
-        id: 5,
-        src: Frame5,
-        thumbSrc: Frame5Thumb
-    },
-    {
-        id: 6,
-        src: Frame6,
-        thumbSrc: Frame6Thumb
-    }
-])
+const selectedFrame = ref(null);
 
-const selectedFrame = ref(frames.value[0]);
+watch(() => props.frames, (newFrames) => {
+    if (newFrames.length > 0) {
+        selectedFrame.value = newFrames[0];
+    }
+});
 
 const selectFrame = (frame) => {
     selectedFrame.value = frame;
+    console.log(selectedFrame.value);
 }
-</script>
 
+onMounted(() => {
+    if (props.frames.length > 0) {
+        selectedFrame.value = props.frames[0];
+    }
+});
+</script>
+ 
 <template>
     <section class="serie-preview">
         <div class="serie-preview__container container">
             <h3>{{ title }}</h3>
-            <img :src="selectedFrame.src" alt="" class="preview__images-big" loading="lazy" />
+            <img v-if="selectedFrame" :src="selectedFrame.src" alt="" :key="selectedFrame.src" class="preview__images-big" loading="lazy" />
             <div class="preview__images-thumb">
                 <img @click="selectFrame(frame)" v-for="frame in frames" :class="{ selected: selectedFrame === frame }" :src="frame.thumbSrc" alt="" loading="lazy">
             </div>

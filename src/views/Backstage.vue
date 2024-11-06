@@ -5,6 +5,55 @@ import Credits from '@/components/Credits.vue';
 import MontePreviews from '@/components/MontePreviews.vue';
 import FinancingCalltoAction from '@/components/FinancingCalltoAction.vue';
 import DownloadableFiles from '@/components/DownloadableFiles.vue';
+
+import Frame1Back from '@/assets/images/frames-backstage/frame-01.jpg';
+import Frame2Back from '@/assets/images/frames-backstage/frame-02.jpg';
+import Frame3Back from '@/assets/images/frames-backstage/frame-03.jpg';
+import Frame4Back from '@/assets/images/frames-backstage/frame-04.jpg';
+import Frame5Back from '@/assets/images/frames-backstage/frame-05.jpg';
+import Frame6Back from '@/assets/images/frames-backstage/frame-06.jpg';
+import Frame1ThumbBack from '@/assets/images/frames-backstage/frame-01-thumb.jpg';
+import Frame2ThumbBack from '@/assets/images/frames-backstage/frame-02-thumb.jpg';
+import Frame3ThumbBack from '@/assets/images/frames-backstage/frame-03-thumb.jpg';
+import Frame4ThumbBack from '@/assets/images/frames-backstage/frame-04-thumb.jpg';
+import Frame5ThumbBack from '@/assets/images/frames-backstage/frame-05-thumb.jpg';
+import Frame6ThumbBack from '@/assets/images/frames-backstage/frame-06-thumb.jpg';
+
+
+const frames = ref([
+    {
+        id: 1,
+        src: Frame1Back,
+        thumbSrc: Frame1ThumbBack
+    },
+    {
+        id: 2,
+        src: Frame2Back,
+        thumbSrc: Frame2ThumbBack
+    },
+    {
+        id: 3,
+        src: Frame3Back,
+        thumbSrc: Frame3ThumbBack
+    },
+    {
+        id: 4,
+        src: Frame4Back,
+        thumbSrc: Frame4ThumbBack
+    },
+    {
+        id: 5,
+        src: Frame5Back,
+        thumbSrc: Frame5ThumbBack
+    },
+    {
+        id: 6,
+        src: Frame6Back,
+        thumbSrc: Frame6ThumbBack
+    }
+])
+
+
 const VideoModal = defineAsyncComponent(() => import ("@/components/VideoModal.vue"))
 
 const showVideoModal = ref(false);
@@ -46,7 +95,7 @@ const bodyOverflow = computed(() => {
         </header>
         <main>
 
-            <MontePreviews title="LO QUE PASÓ DETRÁS DE CÁMARA"/>
+            <MontePreviews title="LO QUE PASÓ DETRÁS DE CÁMARA" :frames="frames"/>
             <Credits />
 
             <section class="production-numbers">
