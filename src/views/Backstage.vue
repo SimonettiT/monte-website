@@ -4,6 +4,7 @@ import BackstageInstagram from '@/components/BackstageInstagram.vue';
 import Credits from '@/components/Credits.vue';
 import MontePreviews from '@/components/MontePreviews.vue';
 import FinancingCalltoAction from '@/components/FinancingCalltoAction.vue';
+import DownloadableFiles from '@/components/DownloadableFiles.vue';
 const VideoModal = defineAsyncComponent(() => import ("@/components/VideoModal.vue"))
 
 const showVideoModal = ref(false);
@@ -52,19 +53,20 @@ const bodyOverflow = computed(() => {
                 <div class="production-numbers__container container">
                     <h2>NÚMEROS DE MONTE</h2>
                     <div class="production__item">
-                        <h3>$1.456.138 ARS | $1462 USD</h3>
+                        <h3>$1.342.000 ARS | $1120 USD</h3>
                         <h5 class="subtitle-accent">Presupuesto total de la serie</h5>
                     </div>
 
 
                     <div class="production__item">
-                        <h3>531 PERSONAS</h3>
+                        <h3>331 PERSONAS</h3>
                         <h5 class="subtitle-accent">implicadas en la serie</h5>
                         <p>8 creadores</p>
                         <p>17 asistentes</p>
                         <p>6 actores</p>
-                        <p>43 extras actorales</p>
-                        <p>342 inversores en la serie</p>
+                        <p>46 extras actorales</p>
+                        <p>23 marcas patrocinadoras</p>
+                        <p>231 inversores en la serie</p>
                     </div>
 
 
@@ -85,6 +87,7 @@ const bodyOverflow = computed(() => {
 
             <BackstageInstagram />
             <FinancingCalltoAction/>
+            <DownloadableFiles/>
         </main>
     </div>
 </template>
