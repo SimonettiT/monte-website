@@ -7,7 +7,7 @@ export const useChaptersStore = defineStore("chapters", () => {
         {
             chapterID: 0,
             name: 'ALFONSINA',
-            teaser: 'https://www.youtube.com/embed/Q5ckNQVp4dM?si=yX7szOTL3F_MjLEr',
+            teaser: 'TQVZXlfwG1g',
             video: 'https://www.youtube.com/embed/Q5ckNQVp4dM?si=yX7szOTL3F_MjLEr',
             videoThumbnail: ThumbCap1,
             videoThumbnailAlt: 'Alfonsina - Capítulo 1',
