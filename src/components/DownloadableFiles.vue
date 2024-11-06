@@ -50,7 +50,7 @@ const downloadables = ref([
                     <div class="downloadable__info">
                         <h4>{{ item.title }}</h4>
                         <p>{{ item.description }}</p>
-                        <a :href="item.link" class="btn" target="_blank"><span class="btn-text">DESCARGAR</span> <DownloadIcon class="download-icon"/></a>
+                        <a :href="item.link" class="btn btn-outline" target="_blank"><span class="btn-text">DESCARGAR</span> <DownloadIcon class="download-icon"/></a>
                     </div>
                 </div>
             </div>
@@ -84,12 +84,19 @@ section.downloadables
         width: 400px
         .downloadable__icon
             height: variables.$icon-xxxl
-.btn
+.btn-outline
     @include mixins.flex(row, center, center, nowrap)
     gap: 1rem
     width: 50%
     margin-inline: auto
     margin-top: 1rem
+    color: colors.$dark
+    border-color: colors.$dark
+    transition: all 0.3s ease-in-out
+    &:hover
+        color: colors.$light
+        border-color: colors.$accent
+        background-color: colors.$accent
     .download-icon
         height: variables.$icon-lg
     .btn-text
