@@ -435,7 +435,7 @@ const contributors = ref([
 
                 <div class="financing__contributors-total">
                     <div class="contributors-data">
-                        <h3>$1.456.318 ARS</h3>
+                        <h3>$1.342.000 ARS</h3>
                         <h5>Presupuesto total recolectado</h5>
                     </div>
                     <div class="contributors-data">

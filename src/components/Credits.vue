@@ -300,6 +300,8 @@ section.credits
     .person-role
         text-transform: uppercase
         font-weight: normal
+    @media (max-width: variables.$bkp-small-medium)
+        justify-content: center
 h3
     margin-block: 2rem 1rem
 .credits__extra
