@@ -5,6 +5,7 @@ import Credits from '@/components/Credits.vue';
 import MontePreviews from '@/components/MontePreviews.vue';
 import FinancingCalltoAction from '@/components/FinancingCalltoAction.vue';
 import DownloadableFiles from '@/components/DownloadableFiles.vue';
+import Logo from '@/assets/icons/CompactMONTELogo.vue';
 
 import Frame1Back from '@/assets/images/frames-backstage/frame-01.jpg';
 import Frame2Back from '@/assets/images/frames-backstage/frame-02.jpg';
@@ -135,6 +136,15 @@ const bodyOverflow = computed(() => {
             </section>
 
             <BackstageInstagram />
+
+            <section class="video-360">
+                <div class="video-360__container container">
+                    <h3>Cómo hicimos el Podcast de MONTE</h3>
+                    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/5JodxwBSONA?si=LKOgXFpPo-2Zn1e7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <Logo class="video-360__background-logo"/>
+            </section>
+
             <FinancingCalltoAction/>
             <DownloadableFiles/>
         </main>
@@ -187,4 +197,72 @@ const bodyOverflow = computed(() => {
             font-weight: fonts.$font-bold
         h5, p
             font-weight: fonts.$font-semibold
+
+.video-360
+    background-image: linear-gradient(140deg, colors.$accent 0%, colors.$dark 100%)
+    padding-block: 5rem
+    position: relative
+    z-index: -2
+    iframe
+        aspect-ratio: 16/9
+        border-radius: 0 0 50px 0
+        width: 100%
+        max-width: 800px
+.video-360__background-logo
+    position: absolute
+    bottom: -50px
+    right: -60px
+    aspect-ratio: 1
+    width: 60%
+    max-width: 700px
+    z-index: variables.$z-content-bellow
+    fill: colors.$accent-dark
+    color: colors.$accent-dark
+    user-select: none
+    &
+        animation: glitch 1s linear infinite
+        &:before,
+        &:after
+            content: attr(title)
+            position: absolute
+            left: 0
+        &:before
+            animation: glitchTop 1s linear infinite
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+        &:after
+            animation: glitchBotom 1.5s linear infinite
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+            -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+@keyframes glitch
+    2%,64%
+        transform: translate(0px,0) skew(0deg)
+    4%,60%
+        transform: translate(0px,0) skew(0deg)
+    62%
+        transform: translate(0,0) skew(5deg)
+
+
+
+
+
+@keyframes glitchTop
+    2%,64%
+        transform: translate(2px,-2px)
+  
+    4%,60%
+        transform: translate(-2px,2px)
+  
+    62%
+        transform: translate(13px,-1px) skew(-13deg)
+  
+@keyframes glitchBotom
+    2%, 64%
+        transform: translate(-2px,0)
+  
+    4%, 60%
+        transform: translate(-2px,0)
+  
+    62%
+        transform: translate(-22px,5px) skew(21deg)
 </style>
