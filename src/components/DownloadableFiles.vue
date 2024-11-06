@@ -11,7 +11,7 @@ const downloadables = ref([
         title: "Diagrama de Gantt",
         description: "Nuestro cronograma de producción",
         icon: GanttIcon,
-        link: "https://drive.google.com/file/d/1J9"
+        link: "https://media.simonettitomas.com/monte/diagrama-gantt.pdf"
     },
     {
         title: "Recorrido de Usuario",
