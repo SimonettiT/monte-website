@@ -1,16 +1,45 @@
 <script setup>
 import SpotifyIcon from '@/assets/icons/SpotifyIcon.vue';
+
+const props = defineProps({
+    spotifyEmbed: {
+        type: String,
+        required: true,
+        default: "https://open.spotify.com/embed/playlist/7mroeAWyuDwVIdG3UWajlJ?utm_source=generator&theme=0"
+    },
+    title: {
+        type: String,
+        required: true,
+        default: "#05000a"
+    },
+    subtitle: {
+        type: String,
+        required: false,
+        default: "EL RITMO DE MONTE"
+    },
+    description: {
+        type: String,
+        required: false,
+        default: "¡Escucha la Playlist en Spotify de MONTE!"
+    },
+    spotifyLink: {
+        type: String,
+        required: true,
+        default: "https://open.spotify.com/playlist/7mroeAWyuDwVIdG3UWajlJ?si=aab21b92466c4046"
+    }
+})
+
 </script>
 
 <template>
     <section class="spotify-playlist">
         <div class="spotify-playlist__container container">
-            <iframe title="Playlist en Spotify de MONTE" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7mroeAWyuDwVIdG3UWajlJ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="Spotify Playlist" style="border-radius:12px" :src="spotifyEmbed" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <div class="spotify-playlist__text">
-                <h5>EL RITMO DE MONTE</h5>
-                <h3>ESCUCHÁ LA FIESTA</h3>
-                <p>La noche es más intensa con la música adecuada, y esta noche suena un musicón. Escuchá la playlist de la fiesta y entendé porqué nadie puede dejar de bailar. </p>
-                <a href="https://open.spotify.com/playlist/7mroeAWyuDwVIdG3UWajlJ?si=a3e4db0fc6bc44b8" target="_blank" class="spotify-playlist__link">
+                <h5>{{ subtitle }}</h5>
+                <h3>{{ title }}</h3>
+                <p>{{ description }}</p>
+                <a :href="spotifyLink" target="_blank" class="spotify-playlist__link">
                     <label>ABRIR EN</label>
                     <SpotifyIcon class="icon spotify-playlist__icon" />
                 </a>

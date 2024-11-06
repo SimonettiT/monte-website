@@ -83,7 +83,13 @@ import MundoMonteCover from '@/assets/images/mundomonte-cover.jpg';
             </div>
         </section>
 
-        <SpotifyPlaylist />
+        <SpotifyPlaylist
+            title="LO QUE SUCEDIÓ DESPUÉS DE MONTE"
+            subtitle="ESCUCHA LAS ENTREVISTAS"
+            description="A la mañana siguiente de la fiesta, el efectivo policial llega al lugar del hecho para comenzar con la investigación del caso. Estas son alguna de las entrevistas que se hicieron a algunos de los presentes de esa noche."
+            spotify-embed="https://open.spotify.com/embed/episode/629iwPrzTdbdYMW79hNLDh?utm_source=generator&theme=0"
+            spotify-link="https://open.spotify.com/show/0iWArTlKAWUEBVm8578XuQ?si=75f91d66ace94da3"
+        />
     </main>
 </template>
 

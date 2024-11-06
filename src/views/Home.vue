@@ -25,7 +25,13 @@ import FinancingCalltoAction from "@/components/FinancingCalltoAction.vue";
 			<FinancingCalltoAction />
 			<CharacterDetails />
 			<BackstageCalltoAction />
-			<SpotifyPlaylist />
+			<SpotifyPlaylist 
+				title="ESCUCHÁ LA FIESTA"
+				subtitle="EL RITMO DE MONTE"
+				description="La noche es más intensa con la música adecuada, y esta noche suena un musicón. Escuchá la playlist de la fiesta y entendé porqué nadie puede dejar de bailar."
+				spotify-embed="https://open.spotify.com/embed/playlist/7mroeAWyuDwVIdG3UWajlJ?utm_source=generator&theme=0"
+				spotify-link="https://open.spotify.com/playlist/7mroeAWyuDwVIdG3UWajlJ?si=aab21b92466c4046"
+			/>
 		</section>
 	</main>
 </template>
