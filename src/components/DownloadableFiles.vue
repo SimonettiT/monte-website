@@ -48,7 +48,7 @@ const downloadables = ref([
                         
                     </div>
                     <div class="downloadable__info">
-                        <h4>{{ item.title }}</h4>
+                        <h5>{{ item.title }}</h5>
                         <p>{{ item.description }}</p>
                         <a :href="item.link" class="btn btn-outline" target="_blank"><span class="btn-text">DESCARGAR</span> <DownloadIcon class="download-icon"/></a>
                     </div>
@@ -82,6 +82,8 @@ section.downloadables
             align-items: center
     .downloadables__item
         width: 400px
+        p
+            font-size: fonts.$font-sm
         .downloadable__icon
             height: variables.$icon-xxxl
 .btn-outline
