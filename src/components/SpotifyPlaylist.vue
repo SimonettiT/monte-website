@@ -64,6 +64,7 @@ section.spotify-playlist
 .spotify-playlist__text
     h5
         font-weight: fonts.$font-regular
+        line-height: 2.2
     h3
         font-weight: fonts.$font-bold
         font-size: fonts.$font-xl

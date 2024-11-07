@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch, nextTick } from 'vue';
 import Alfonsina from '@/assets/images/alfonsina.jpg';
 import Maximo from '@/assets/images/maximo.jpg';
 import Franca from '@/assets/images/franca.jpg';
@@ -65,6 +65,16 @@ const selectedCharacter = ref(characters.value[0])
 const selectCharacter = (character) => {
     selectedCharacter.value = character
 }
+
+watch(selectedCharacter, async (newCharacter, oldCharacter) => {
+    if (newCharacter !== oldCharacter) {
+        const scrollPosition = window.scrollY;
+        await nextTick();
+        setTimeout(() => {
+            window.scrollTo(0, scrollPosition);
+        }, 280);
+    }
+});
 </script>
 
 <template>
@@ -76,12 +86,12 @@ const selectCharacter = (character) => {
                         <img :key="selectedCharacter" :src="selectedCharacter.thumb" alt="" class="characters__selected-image">
                     </transition>
                 </div>
-                <transition name="fade">
-                    <div :key="selectedCharacter" class="characters__selected-info">
-                        <h2>{{ selectedCharacter.name }}</h2>
+                <div :key="selectedCharacter" class="characters__selected-info">
+                    <h2>{{ selectedCharacter.name }}</h2>
+                    <div class="character__description-container">
                         <p>{{ selectedCharacter.description }}</p>
                     </div>
-                </transition>
+                </div>
                 
             </div>
             
@@ -118,6 +128,7 @@ const selectCharacter = (character) => {
         gap: 5rem
 
 .characters-rooster__selection-container
+    position: relative
     h2
         font-size: fonts.$font-xxl
         font-weight: bold
@@ -195,6 +206,8 @@ const selectCharacter = (character) => {
 
 .fade-enter-active, .fade-leave-active
     transition: opacity .25s ease-in-out
+p.fade-leave-active, p.fade-enter-active
+    position: absolute
 .fade-enter-to, .fade-leave-to
     opacity: 0
 </style>

@@ -109,14 +109,15 @@ const bodyOverflow = computed(() => {
 
 
                     <div class="production__item">
-                        <h3>331 PERSONAS</h3>
-                        <h5 class="subtitle-accent">implicadas en la serie</h5>
-                        <p>8 creadores</p>
-                        <p>17 asistentes</p>
-                        <p>6 actores</p>
-                        <p>46 extras actorales</p>
-                        <p>23 marcas patrocinadoras</p>
-                        <p>231 inversores en la serie</p>
+                        <h3>334 PERSONAS</h3>
+                        <h5 class="subtitle-accent">Implicadas en la serie</h5>
+                        <p>8 Creadores</p>
+                        <p>17 Asistentes</p>
+                        <p>6 Actores</p>
+                        <p>46 Extras actorales</p>
+                        <p>23 Marcas patrocinadoras</p>
+                        <p>231 Inversores en la serie</p>
+                        <p>3 Tutores universitarios</p>
                     </div>
 
 
@@ -202,7 +203,9 @@ const bodyOverflow = computed(() => {
     background-image: linear-gradient(140deg, colors.$accent 0%, colors.$dark 100%)
     padding-block: 5rem
     position: relative
-    z-index: -2
+    .video-360__container
+        position: relative
+        z-index: 2
     iframe
         aspect-ratio: 16/9
         border-radius: 0 0 50px 0
@@ -210,12 +213,12 @@ const bodyOverflow = computed(() => {
         max-width: 800px
 .video-360__background-logo
     position: absolute
-    bottom: -50px
+    bottom: 0
     right: -60px
     aspect-ratio: 1
     width: 60%
     max-width: 700px
-    z-index: variables.$z-content-bellow
+    z-index: 1
     fill: colors.$accent-dark
     color: colors.$accent-dark
     user-select: none

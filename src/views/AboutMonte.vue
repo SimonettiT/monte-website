@@ -52,13 +52,13 @@ import MundoMonteCover from '@/assets/images/mundomonte-cover.jpg';
                 </div>
 
                 <div class="mundo-monte__item item-center">
-                    <h4>TODOS QUIENES CREÍAS CONOCER CAMBIAN</h4>
-                    <p><span class="item-accent item-bold">Sumergite en un laberinto lleno de tensiones ocultas </span></p>
+                    <h4>LOS QUE CREÍAS CONOCER CAMBIAN</h4>
+                    <p><span class="item-accent item-bold">Adentrate en un laberinto de tensiones ocultas</span></p>
                 </div>
 
                 <div class="mundo-monte__item item-left">
                     <h3>NO TE PIERDAS</h3>
-                    <p>Mantente alerta, porque en MONTE, nada es lo que parece y el peligro está siempre al acecho. ¿En quién podrás confiar?</p>
+                    <p>Estate alerta, porque en MONTE, nada es lo que parece y el peligro acecha, ¿En quién vas a confiar?</p>
                 </div>
 
                 <div class="mundo-monte__item item-center">
@@ -84,9 +84,9 @@ import MundoMonteCover from '@/assets/images/mundomonte-cover.jpg';
         </section>
 
         <SpotifyPlaylist
-            title="LO QUE SUCEDIÓ DESPUÉS DE MONTE"
+            title="¿QUÉ PASÓ DESPUES DE LA FIESTA?"
             subtitle="ESCUCHA LAS ENTREVISTAS"
-            description="A la mañana siguiente de la fiesta, el efectivo policial llega al lugar del hecho para comenzar con la investigación del caso. Estas son alguna de las entrevistas que se hicieron a algunos de los presentes de esa noche."
+            description="A la mañana siguiente de la fiesta, el efectivo policial llegó a la casa para comenzar con la investigación del caso. Estas son las entrevistas que se hicieron a algunos de los presentes de esa noche."
             spotify-embed="https://open.spotify.com/embed/episode/629iwPrzTdbdYMW79hNLDh?utm_source=generator&theme=0"
             spotify-link="https://open.spotify.com/show/0iWArTlKAWUEBVm8578XuQ?si=75f91d66ace94da3"
         />
