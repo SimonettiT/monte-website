@@ -13,9 +13,7 @@ const chaptersStore = useChaptersStore();
 
 watch(() => chaptersStore.selectedChapter, (newChapter) => {
     selectedChapter.value = newChapter;
-    { immediate: true }
 });
-
 
 
 const selectedChapter = ref(chaptersStore.selectedChapter)

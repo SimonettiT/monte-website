@@ -149,6 +149,7 @@ const bodyOverflow = computed(() => {
     background-color: colors.$accent
     border-radius: 50%
     cursor: pointer
+    display: none
     svg
         transition: color 0.5s
         color: colors.$light

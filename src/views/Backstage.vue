@@ -130,8 +130,8 @@ const bodyOverflow = computed(() => {
                     <div class="production__item">
                         <h3>3 <span class="subtitle-accent">CAPÍTULOS</span></h3>
                         <p>2 Locaciones</p>
-                        <p>158 tomas</p>
-                        <p>239GB de información</p>
+                        <p>158 Tomas</p>
+                        <p>239GB de Información</p>
                     </div>
                 </div>
             </section>

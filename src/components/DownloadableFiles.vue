@@ -38,8 +38,8 @@ const downloadables = ref([
     <section class="downloadables">
         <div class="downloadables__container container">
             <div class="downloadables__titles">
-                <h3>Haz tu propio proyecto audiovisual</h3>
-                <p>Descarga los archivos y plantillas que utilizamos para organizarnos y producir MONTE de manera gratuita.</p>
+                <h3>Hacé tu propio proyecto audiovisual</h3>
+                <p>Descargá de manera gratuita los archivos y plantillas que usamos para organizarnos y producir MONTE.</p>
             </div>
             <div class="downloadables__list">
                 <div class="downloadables__item" v-for="item in downloadables">
