@@ -20,10 +20,9 @@ const props = defineProps({
     }
 })
 
-const setSelectedChapter = (chapterID) => {
-        chaptersStore.selectedChapter.value = chaptersStore.chapters.find(chapter => chapter.chapterID === chapterID);
-        console.log(chaptersStore.selectedChapter.value)
-}
+const changeChapter = (chapterID) => {
+    chaptersStore.selectChapter(chapterID);
+};
 
 const getThumbnail = (video) => {
     if (video.isAvailable === true) {
@@ -47,7 +46,7 @@ const getThumbnail = (video) => {
                     <router-link 
                         v-if="chapter.isAvailable === true" 
                         :to="{ name: 'Chapters' } "
-                        @click="setSelectedChapter(chapter.chapterID)"
+                        @click="changeChapter(chapter.chapterID)"
                         >
                         <PlayArrow class="chapters__icon"/>
                     </router-link>

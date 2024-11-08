@@ -17,7 +17,7 @@ export const useChaptersStore = defineStore("chapters", () => {
         {
             chapterID: 1,
             name: 'RENATA Y FRANCA',
-            teaser: 'https://www.youtube.com/embed/_KfZ8MYzBkk?si=dikvq6JL6kporYXp',
+            teaser: 'TQVZXlfwG1g',
             video: 'https://www.youtube.com/embed/_KfZ8MYzBkk?si=dikvq6JL6kporYXp',
             videoThumbnail: 'https://i.ytimg.com/vi/3v1ZQ6Z2JZQ/maxresdefault.jpg',
             videoThumbnailAlt: 'Renata y Franca - Capítulo 2',
@@ -39,9 +39,17 @@ export const useChaptersStore = defineStore("chapters", () => {
 
     const selectedChapter = ref(chapters.value[0]);
 
+    const selectChapter = (chapterID) => {
+        const chapter = chapters.value.find(ch => ch.chapterID === chapterID);
+        if (chapter) {
+            selectedChapter.value = chapter;
+        }
+    };
+
     return {
         chapters,
-        selectedChapter
+        selectedChapter,
+        selectChapter
     }
 
 })
