@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 import ThumbCap1 from '@/assets/images/thumbnail-cap1.jpg';
+import ThumbCap2 from '@/assets/images/thumbnail-cap2.jpg';
 
 export const useChaptersStore = defineStore("chapters", () => {
     const chapters = ref([
@@ -16,13 +17,13 @@ export const useChaptersStore = defineStore("chapters", () => {
         },
         {
             chapterID: 1,
-            name: 'RENATA Y FRANCA',
+            name: 'FRANCA Y RENATA',
             teaser: 'TQVZXlfwG1g',
-            video: 'https://www.youtube.com/embed/_KfZ8MYzBkk?si=dikvq6JL6kporYXp',
-            videoThumbnail: 'https://i.ytimg.com/vi/3v1ZQ6Z2JZQ/maxresdefault.jpg',
-            videoThumbnailAlt: 'Renata y Franca - Capítulo 2',
-            synopsis: 'La música no deja de sonar y Renata y Franca  (O FRANCA Y RENATA) se ven atrapadas en un ambiente de excesos y miradas tensas. La ausencia de Alfonsina se hace evidente, y su búsqueda las lleva a recorrer un laberinto lleno de tensiones ocultas y reproches inesperados.',
-            isAvailable: false
+            video: 'https://www.youtube.com/embed/7aWuqEX3J0Y?si=7EUyKEIC6NdmP8e_',
+            videoThumbnail: ThumbCap2,
+            videoThumbnailAlt: 'Franca y Renata - Capítulo 2',
+            synopsis: 'La música no deja de sonar. Franca y Renata se ven atrapadas en un ambiente de excesos y miradas tensas. La ausencia de Alfonsina se hace evidente, y su búsqueda las lleva a recorrer un laberinto lleno de tensiones ocultas y reproches inesperados.',
+            isAvailable: true
         },
         {
             chapterID: 2,
