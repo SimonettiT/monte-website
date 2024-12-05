@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 import ThumbCap1 from '@/assets/images/thumbnail-cap1.jpg';
 import ThumbCap2 from '@/assets/images/thumbnail-cap2.jpg';
+import MONTEThumbnail from '@/assets/images/monte-thumbnail.jpg';
 
 export const useChaptersStore = defineStore("chapters", () => {
     const chapters = ref([
@@ -18,7 +19,7 @@ export const useChaptersStore = defineStore("chapters", () => {
         {
             chapterID: 1,
             name: 'FRANCA Y RENATA',
-            teaser: 'TQVZXlfwG1g',
+            teaser: 'bC3ZuAoxUOU',
             video: 'https://www.youtube.com/embed/7aWuqEX3J0Y?si=7EUyKEIC6NdmP8e_',
             videoThumbnail: ThumbCap2,
             videoThumbnailAlt: 'Franca y Renata - Capítulo 2',
@@ -28,12 +29,12 @@ export const useChaptersStore = defineStore("chapters", () => {
         {
             chapterID: 2,
             name: 'MÁXIMO',
-            teaser: 'https://www.youtube.com/embed/9lxZpXWYlpA?si=rqq9SsGuASak85mu',
-            video: 'https://www.youtube.com/embed/9lxZpXWYlpA?si=rqq9SsGuASak85mu',
-            videoThumbnail: 'https://i.ytimg.com/vi/3v1ZQ6Z2JZQ/maxresdefault.jpg',
+            teaser: 'TQVZXlfwG1g',
+            video: 'https://www.youtube.com/watch?v=35PEotET9TY',
+            videoThumbnail: MONTEThumbnail,
             videoThumbnailAlt: 'Máximo - Capítulo 3',
             synopsis: 'Entre porros y puchos, Maximo se deja llevar por el ambiente hasta que algo llama su atención. A lo lejos, una figura que se va de la fiesta. La música y las voces de sus amigos se desvanecen a sus espaldas, mientras él sigue una sombra en la noche, reviviendo recuerdos que se vuelven cada vez más inquietantes.',
-            isAvailable: false
+            isAvailable: true
         },
     
     ]);
