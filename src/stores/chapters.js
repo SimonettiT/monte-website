@@ -30,7 +30,7 @@ export const useChaptersStore = defineStore("chapters", () => {
             chapterID: 2,
             name: 'MÁXIMO',
             teaser: 'TQVZXlfwG1g',
-            video: 'https://www.youtube.com/watch?v=35PEotET9TY',
+            video: 'https://www.youtube.com/embed/35PEotET9TY?si=hJ9JV1QvkctalNKN',
             videoThumbnail: MONTEThumbnail,
             videoThumbnailAlt: 'Máximo - Capítulo 3',
             synopsis: 'Entre porros y puchos, Maximo se deja llevar por el ambiente hasta que algo llama su atención. A lo lejos, una figura que se va de la fiesta. La música y las voces de sus amigos se desvanecen a sus espaldas, mientras él sigue una sombra en la noche, reviviendo recuerdos que se vuelven cada vez más inquietantes.',
